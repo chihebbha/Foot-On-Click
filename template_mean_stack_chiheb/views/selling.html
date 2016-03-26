@@ -1,0 +1,98 @@
+
+<!-- content -->
+<div class="body2">
+  <div class="main">
+    <section id="content" >
+
+        <div class="imageBack" ng-init="reservation1=false;reservation2=false;reservation3=false;reservation4=false;reservation5=false;reservation6=false;" ng-show="!reservation1|| !reservation2|| !reservation3|| !reservation4|| !reservation5|| !reservation6"> 
+           <!--
+        partie gauche du terrain
+-->
+            <div id="aileGauche" ng-show="!reservation1">
+<img src="../images/Black-Soccer_ball.svg.png" style="width:40px;
+    height:40px;" ng-click="reservation1=true"/>
+                </div>
+              <div id="aileGauche" ng-show="reservation1">
+<img src="../images/red-football-hi.png" style="width:40px;
+    height:40px;" ng-click="reservation1=false"/>
+                </div>
+            
+            
+            
+            
+            <div id="arrGauche1" ng-show="!reservation2" >
+<img src="../images/Black-Soccer_ball.svg.png" style="width:40px;
+    height:40px;" ng-click="reservation2=true"/>
+                </div>
+             <div id="arrGauche1" ng-show="reservation2">
+<img src="../images/red-football-hi.png" style="width:40px;
+    height:40px;" ng-click="reservation2=false"/>
+                </div>
+            
+            
+            
+            
+            
+            
+                <div id="axial" ng-show="!reservation3">
+<img src="../images/Black-Soccer_ball.svg.png" style="width:40px;
+    height:40px;" ng-click="reservation3=true"/>
+                </div>
+                <div id="axial" ng-show="reservation3">
+<img src="../images/red-football-hi.png" style="width:40px;
+    height:40px;" ng-click="reservation3=false"/>
+                </div>
+            
+            
+            
+            
+            
+          <div id="gardien" ng-show="!reservation4">
+   <img src="../images/Black-Soccer_ball.svg.png" style="width:40px;
+                                                        
+                                                      height:40px;" ng-click="reservation4=true" /></div>
+<div id="gardien" ng-show="reservation4">
+    <img src="../images/red-football-hi.png" style="width:40px;
+    height:40px;" ng-click="reservation4=false" />
+</div>
+
+                   
+                   
+                   
+                   
+             <div id="arrDroit1" ng-show="!reservation5">
+<img src="../images/Black-Soccer_ball.svg.png" style="width:40px;
+    height:40px;" ng-click="reservation5=true"/>
+                </div>
+             <div id="arrDroit1" ng-show="reservation5">
+<img src="../images/red-football-hi.png" style="width:40px;
+    height:40px;" ng-click="reservation5=false"/>
+                </div>
+            
+            
+            
+            
+            
+              <div id="aileDroit" ng-show="!reservation6">
+<img src="../images/Black-Soccer_ball.svg.png" style="width:40px;
+    height:40px;" ng-click="reservation6=true"/>
+                </div>
+           <div id="aileDroit" ng-show="reservation6">
+<img src="../images/red-football-hi.png" style="width:40px;
+    height:40px;" ng-click="reservation6=false"/>
+                </div>
+           <!--
+        end   partie gauche du terrain
+-->
+            
+            </div>
+        <div ng-show="reservation1&&reservation2&&reservation3&&reservation4&&reservation5&&reservation6">
+        Réservation passée avec succée
+        </div>
+
+    </section>
+  </div>
+</div>
+
+<script>Cufon.now();</script>
+
