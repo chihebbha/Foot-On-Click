@@ -47,7 +47,7 @@ console.log(a);
 })
 
 
-.controller("GetAllBetItalia",function($scope,AllBet,$http){
+.controller("GetAllBetItalia",function($scope,AllBet,$http,$timeout,$q,dataService){
   $scope.italianMatch=[];
     $scope.spanishMatch=[];
     $scope.championsLeague=[];
@@ -58,11 +58,87 @@ console.log(a);
     $scope.NextspanishMatch=[];
     $scope.others=[];
     $scope.teams=[];
+    $scope.cotes=[];
+    
      $http.defaults.headers.common['X-Auth-Token'] = '6903147d81d64f048cf2c8117ac49b70';
+    
+  $scope.getCote1=  function (link) {
+    
+      var objet;
+      dataService.getData(link).then(function(dataResponse) {
+          
+var cote2=1+(1+dataResponse.data.head2head.homeTeamWins)/(1+dataResponse.data.head2head.awayTeamWins);
+          
+var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.head2head.homeTeamWins) ;
+        
+           objet={
+             "equipe2":cote2,
+             "equipe1":cote1,
+            "draw":(cote1+cote2)/2, "match":dataResponse.data.fixture._links.self.href
+             
+        };
+          //console.log(objet);
+          $scope.cotes.push(objet);
+          $scope.aaa1=Math.round(objet.equipe1*100)/100;
+          $scope.aaa2=Math.round(objet.equipe2*100)/100;
+          $scope.aaad=Math.round(objet.draw*100)/100;     
+         
+    });
+        $timeout(function() {
+             //return $scope.aaa1;     
+        console.log($scope.cotes) ;
+      console.log($scope.aaa1) ;
+      console.log($scope.aaa2) ;
+      console.log($scope.aaad) ;
+      console.log(objet) ;
+             
+    },1000);
+
+    
+  }
+    
+//  $scope.getCote1=  function (link) {
+//      
+//   $http.get(link).then(function(data){
+//       $scope.data1=data;});
+//            console.log($scope.data1);
+//      return $scope.data1;
+//
+//}
+  
+  
+    
+//     $scope.getCote1=function(link){
+//         var defer = $q.defer();
+//             $http.get(link).
+//        success(function(data) {
+//            defer.resolve(22);
+//             // $scope.data1=data.data.head2head.homeTeamWins;
+//                 
+//             $timeout(function() {
+//                  
+//            console.log(defer.promise.$$state.value);
+//             
+//    },1000);
+//                   return defer.promise.$$state.value;
+//        });
+//             
+//        return {
+//    getCote1: $scope.getCote1
+//  };
+//        
+//        
+//     
+//     
+//     };
+    
+    
     
     $http.get('http://api.football-data.org/v1/soccerseasons/401/fixtures').
         success(function(data) {
         var dt=new Date();
+       
+        
         var dtdt= dt.toString().substring(0,15);
       
         for(var i=0;i<data.fixtures.length;i++)
@@ -226,7 +302,6 @@ console.log(a);
             { 
                  
             $scope.teams.push(data[i]);
-              console.log("gg"); 
             }
        
 
@@ -235,9 +310,7 @@ console.log(a);
       for(var i=0;i<$scope.teams.length;i++)
             { 
                 if($scope.teams[i].name==team){
-                    console.log(team);
-                    
-            console.log($scope.teams[i]);
+                   
                     return $scope.teams[i].crestUrl;
                 break;}
             }

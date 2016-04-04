@@ -1,31 +1,26 @@
 angular.module('footApplication.services', [])
 
+.filter('currentdate', ['$filter', function ($filter) {
+    return function () {
+        return $filter('date')(new Date(), 'EEEE  dd/MM/yyyy ');
+    };
+}])
+
+.service('dataService', function($http) {
+   $http.defaults.headers.common['X-Auth-Token'] = '6903147d81d64f048cf2c8117ac49b70';
+this.getData = function(link) {
+    // $http() returns a $promise that we can add handlers with .then()
+    return $http({
+        method: 'GET',
+        url: link
+     });
+ }
+})
+
+
 
     .factory('AllBet', function ($resource) {
   
         return $resource('http://api.football-data.org/v1/soccerseasons/1/fixtures');
-   
-    
-/*    return  {
- method: 'GET',
- url: 'http://api.football-data.org/v1/soccerseasons',
- headers: {
-     'Access-Control-Allow-Credentials' :'true',
-     //'X-Auth-Token': '33b36cb6ea9044b098286f052b6dec8f',
-     'Access-Control-Allow-Headers':'*',
-    'Access-Control-Allow-Origin': '*',
-   'Content-Type': undefined
- },
- data: { test: 'test' }
-};*/
-    // Note the full endpoint address
-    })
 
-
-
-
-
-
-;
-//https://edg.epa.gov/data.json
-//http://bassemchagra.com/bourse.php
+    });
