@@ -2,7 +2,7 @@ angular.module('footApplication.services', [])
 
 .filter('currentdate', ['$filter', function ($filter) {
     return function () {
-        return $filter('date')(new Date(), 'EEEE  dd/MM/yyyy ');
+        return $filter('date')(new Date(), 'EEEE  dd/MM/yyyy HH:mm');
     };
 }])
 
