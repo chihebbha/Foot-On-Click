@@ -27,6 +27,10 @@ angular.module('footApplication', ['ngRoute','footApplication.controllers','foot
        .when('/pastMatch', {
         templateUrl: 'views/pastMatch.html' 
       })
+      .when('/classement', {
+        templateUrl: 'views/classement.html',
+        controller:'classementCTRL'
+      })
     ;
     
   }])

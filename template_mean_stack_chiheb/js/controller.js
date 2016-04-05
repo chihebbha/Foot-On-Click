@@ -458,4 +458,103 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
         });
 
 
+})
+
+
+
+
+
+
+
+
+
+
+.controller('classementCTRL',function($scope,$http){
+    
+    $scope.standingSpanish=[];
+        $scope.standingSpanish=[];
+
+        $scope.standingdeutch=[];
+
+        $scope.standingfrensh=[];
+
+        $scope.standingitalian=[];
+
+        $scope.standingenglish=[];
+        $scope.standingPortugal=[];
+
+
+   
+        $http.defaults.headers.common['X-Auth-Token'] = '6903147d81d64f048cf2c8117ac49b70';
+    
+    
+    
+$http.get('http://api.football-data.org/v1/soccerseasons/394/leagueTable').
+        success(function(data) {
+       
+       for(var i=0;i<data.standing.length;i++){
+          $scope.standingdeutch.push(data.standing[i]);
+      }
+  
+        });
+    
+    //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/396/leagueTable').
+        success(function(data) {
+       
+       for(var i=0;i<data.standing.length;i++){
+          $scope.standingfrensh.push(data.standing[i]);
+      }
+    
+       
+
+        });
+    
+     //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/398/leagueTable').
+        success(function(data) {
+       
+       for(var i=0;i<data.standing.length;i++){
+          $scope.standingenglish.push(data.standing[i]);
+      }
+    
+       
+
+        });
+     //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/399/leagueTable').
+        success(function(data) {
+       
+       $scope.spanishMatch=data.matchday;
+        
+      for(var i=0;i<data.standing.length;i++){
+          $scope.standingSpanish.push(data.standing[i]);
+      }
+       
+
+        });
+     //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/401/leagueTable').
+        success(function(data) {
+       
+      for(var i=0;i<data.standing.length;i++){
+          $scope.standingitalian.push(data.standing[i]);
+      }
+    
+       
+
+        });
+        //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/401/leagueTable').
+        success(function(data) {
+       
+       for(var i=0;i<data.standing.length;i++){
+          $scope.standingPortugal.push(data.standing[i]);
+      }
+    
+       
+
+        });
+    
+    
 });
