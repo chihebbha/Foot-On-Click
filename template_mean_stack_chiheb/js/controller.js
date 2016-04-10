@@ -75,6 +75,24 @@ console.log(a);
 var cote2=1+(1+dataResponse.data.head2head.homeTeamWins)/(1+dataResponse.data.head2head.awayTeamWins);
           
 var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.head2head.homeTeamWins) ;
+          
+    var diff1=dataResponse.data.fixture.result.goalsHomeTeam - dataResponse.data.fixture.result.goalsAwayTeam;
+          if(diff1<0){
+              cote1=cote1*1.2;
+              cote2=cote2*0.8;
+              if(cote2<=1){
+                  cote2=1.15;
+              }
+              
+          }
+          if(diff1>0){
+              cote2=cote1*1.2;
+              cote1=cote2*0.8;
+              if(cote1<=1){
+                  cote1=1.15;
+              }
+              
+          }
        
            objet={
              "equipe2":Math.round(cote2*100)/100,

@@ -8,6 +8,9 @@ router.get('/teams',function(req,res){
   mLab.listDocuments({
     database: 'footonclick',
     collectionName: 'teams'
+    //query:"code":"Watfordfc"
+    //findOne:true,
+    //limit:2
 
   },function(err,data){
    // console.log(data);

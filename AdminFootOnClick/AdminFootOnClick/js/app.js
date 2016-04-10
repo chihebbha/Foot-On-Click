@@ -1,5 +1,5 @@
 
-angular.module('foot', ['ngResource', 'ngRoute','foot.controllers','foot.services'])
+angular.module('foot', ['ngResource', 'ngRoute','foot.controllers','foot.services','ng-fusioncharts'])
 
  .config(['$routeProvider',
   function($routeProvider) {
