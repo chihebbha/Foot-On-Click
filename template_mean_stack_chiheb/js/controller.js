@@ -575,4 +575,84 @@ $http.get('http://api.football-data.org/v1/soccerseasons/394/leagueTable').
         });
     
     
-});
+})
+
+
+//----- work raja Actuality-------////
+
+    .controller('FbActuality', function($scope,$http) {
+
+        $http.get('http://localhost:3000/fb/data').
+        success(function(data) {
+
+
+            $scope.fbs=data;
+        });
+
+        //$scope.fbs=fb.query();
+
+    })
+
+
+
+
+
+
+
+
+.controller('ReclamationCtrl', function($scope,$http) {
+    var config = {
+        headers : {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+        }
+    };
+    $scope.recalmmer=function(c){
+        var aa={objet:"anobjet",message:"amessage"};
+        $http.post('http://localhost:3000/claim', aa, config)
+            .success(function (data, status, headers, config) {
+console.log(data);            })
+            .error(function (data, status, header, config) {
+                $scope.ResponseDetails = "Data: " + data +
+                    "<hr />status: " + status +
+                    "<hr />headers: " + header +
+                    "<hr />config: " + config;
+            });
+
+}
+
+
+
+})
+
+//----- End work raja Actuality-------////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
