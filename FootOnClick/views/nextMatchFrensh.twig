@@ -1,0 +1,32 @@
+
+
+{%  extends 'layout.twig' %}
+
+{%  block content %}
+<form method="post" action="/frenshMatch/team">
+    <table border="1">
+        <thead><th>date</th><th>status</th><th>equipe 1</th><th>equipe 2</th></thead>
+        {% for d in data %}
+            <tr>
+                <td>{{ d.date }}</td>
+                <td bgcolor="#90ee90">{{ d.status }}</td>
+                <td > <a href="/spanishMatch/team/{{ d._links.homeTeam.href|slice(38,3) }}"> {{ d.homeTeamName }}</a> </td>
+                <td > <a href="/spanishMatch/team/{{ d._links.awayTeam.href|slice(38,3) }}"> {{ d.awayTeamName }}</a> </td>
+
+
+
+
+
+            </tr>
+        {% endfor %}
+        <a href="/frenshMatch/pastMatch">Past Matchs</a>
+
+
+
+    </table>
+</form>
+<a href="/frenshMatch/moreNext">More >>>>></a>
+
+
+
+{%  endblock %}

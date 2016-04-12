@@ -20,12 +20,9 @@ angular.module('footApplication', ['ngRoute','footApplication.controllers','foot
     .when('/renting', {
         templateUrl: 'views/renting.html' 
       })
-        .when('/actuality', {
-          templateUrl: 'views/actuality.html'
-        })
     
-    .when('/reclamation', {
-        templateUrl: 'views/reclamation.html'
+    .when('/contacts', {
+        templateUrl: 'views/contacts.html' 
       })
        .when('/pastMatch', {
         templateUrl: 'views/pastMatch.html' 

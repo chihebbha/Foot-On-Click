@@ -14,7 +14,6 @@
     "express-session": "^1.13.0",
     "http": "0.0.0",
     "jade": "~1.11.0",
-    "fb": "~1.0.2",
     "mongolab-data-api": "^1.1.4",
     "mongoose": "^4.4.6",
     "morgan": "~1.6.1",
