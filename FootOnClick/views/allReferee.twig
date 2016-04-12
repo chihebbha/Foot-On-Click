@@ -1,0 +1,28 @@
+{% extends 'layout.twig' %}
+
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Last Name</th>
+        <th>First NAme</th>
+        <th>Age</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for r in ref %}
+    <tr>
+       
+        <td>{{ r.note }}</td>
+        <td>{{ r.first_name }}</td>
+        <td>{{ r.age }}</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

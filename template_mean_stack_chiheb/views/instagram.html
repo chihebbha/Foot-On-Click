@@ -1,0 +1,24 @@
+<div ng-controller="instagramController">
+   
+<div class="content-section-b">
+<div class="container">
+    <div class="row text-center">
+        <div ng-repeat="ins in insta ">
+        <div class="col-sm-6">
+      <img src="{{ins.images.low_resolution.url}}" alt="...">
+    <a href="#"><b>Likes : </b> <span class="badge">{{ins.likes.count}}</span></a>
+      <div class="caption">
+        <h3>{{ins.location.name}}</h3>
+        <i><b>Tags</b></i>
+        <p>{{ins.caption.text}}</p>
+        
+      </div>
+ </div>
+</div>
+</div>
+    </div>
+</div>
+
+</div>    
+
+</div>

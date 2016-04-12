@@ -1,0 +1,29 @@
+ {% extends '../layout.twig' %}
+{% block content %}
+<center><h1>My pictures uploaded</h1></center>
+    {% for p in mypic %}
+   <div id="wrapper">
+  <div id="page-wrapper">
+
+            <div class="container-fluid">
+    
+    
+    <div class="row">
+    
+  <div class="col-sm-2 col-md-2">
+    <div class="thumbnail">
+      <img src="{{p.images.thumbnail.url}}" alt="...">
+      <a href="#"><b>Likes : </b> <span class="badge">{{p.likes.count}}</span></a>
+      <div class="caption">
+        <h3>{{p.location.name}}</h3>
+        <i>Tags</i>
+        <p>{{p.caption.text}}</p>
+        <p><a href="{{p.link}}" class="btn btn-primary" role="button">Go</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+      </div></div></div>    
+      
+{% endfor %}
+{% endblock %}

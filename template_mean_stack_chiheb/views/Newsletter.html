@@ -1,0 +1,20 @@
+<form name="formNewsletter" ng-submit="submit(user)" ng-controller="NewsletterController">
+
+        <div class="con-for">
+
+            <div class="form-field contact-name">
+                <input type="text" class="con-txt" placeholder="Nome" maxlength=20 minlength=5  ng-pattern="[a-zA-Z]" ng-model="user.name" required/>
+            </div>
+
+            <div class="form-field contact-email">    
+                <input type="email" class="con-txt" placeholder="Email" ng-model="user.email" required/>
+            </div>
+        </div>
+
+        <div class="form-field contact-btn">
+
+            <input type="submit" class="con-btn" value="Contattaci" />
+        </div>
+        <div class="form-field news-chk">
+        <input type="checkbox" checked ng-model="user.privacy" id="1" required/><label for="1" >Accettazione Privacy.</label>
+        </div>

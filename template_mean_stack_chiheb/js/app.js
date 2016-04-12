@@ -20,7 +20,15 @@ angular.module('footApplication', ['ngRoute','footApplication.controllers','foot
     .when('/renting', {
         templateUrl: 'views/renting.html' 
       })
-    
+    .when('/actualityInsta', {
+        templateUrl: 'views/instagram.html' 
+      })
+     .when('/weather', {
+        templateUrl: 'views/weather.html' 
+      })
+    .when('/Newsletter', {
+        templateUrl: 'views/Newsletter.html' 
+      })
     .when('/contacts', {
         templateUrl: 'views/contacts.html' 
       })
@@ -30,6 +38,14 @@ angular.module('footApplication', ['ngRoute','footApplication.controllers','foot
       .when('/classement', {
         templateUrl: 'views/classement.html',
         controller:'classementCTRL'
+      })
+    .when('/reclamation', {
+        templateUrl: 'views/reclamation.html'
+       
+      })
+     .when('/actuality', {
+        templateUrl: 'views/actuality.html'
+       
       })
     ;
     

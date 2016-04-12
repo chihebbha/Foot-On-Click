@@ -1,0 +1,21 @@
+{% extends 'layout.twig' %}
+ 
+
+{%block content%}
+<style type="text/css">
+  body {
+    
+    background-image: url(http://p1.pichost.me/i/10/1334837.jpg);
+    }
+  </style>
+{% for t in takes %}
+   <div class="jumbotron">
+   <center>
+    <h1>{{t.location.name}}</h1><br>
+       <h2>{{t.current.temperature}}</h2>
+       </center>
+</div>
+{% endfor %}
+{% endblock %}
+
+                    

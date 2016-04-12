@@ -1,0 +1,26 @@
+<div ng-controller="FbActuality">
+
+
+    <div ng-repeat="d in fbs.posts.data">
+        <div class="panel panel-default ">
+
+            <p><h3>{{ d.message }}</h3> </p>
+            <img src="{{ d.full_picture }}" width="300px" height="300px"  alt=""/>
+
+
+
+            <div ng-repeat="comms in d.comments.data">
+                <b style="font-size: large;color: black">{{comms.from.name}} : </b>{{comms.created_time | date:'dd/MM/yyyy'}}<br>{{comms.message}}
+                </hr>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    {{fbs}}
+
+</div>

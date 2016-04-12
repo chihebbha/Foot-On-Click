@@ -1,0 +1,26 @@
+ {% extends '../layout.twig' %}
+{% block content %}
+<center><h1>Liked media</h1></center>
+    {% for pt in liked %}
+   
+    
+    
+    <div class="row">
+    
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{pt.images.low_resolution.url}}" alt="...">
+      <a href="#"><b>Likes : </b> <span class="badge">{{pt.likes.count}}</span></a>
+      <div class="caption">
+        <h3>{{pt.location.name}}</h3>
+        <i><b>Tags</b></i>
+        <p>{{pt.caption.text}}</p>
+        <p><a href="{{pt.link}}" class="btn btn-primary" role="button">Go</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+     
+      
+{% endfor %}
+{% endblock %}

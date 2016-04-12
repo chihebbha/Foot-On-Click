@@ -1,4 +1,4 @@
-angular.module('footApplication.controllers', [])
+    angular.module('footApplication.controllers', [])
 
 .controller('BetInFicheParis',function($scope){
     
@@ -575,4 +575,107 @@ $http.get('http://api.football-data.org/v1/soccerseasons/394/leagueTable').
         });
     
     
-});
+})
+    
+    
+.controller('instagramController', function($scope,$http) {
+
+        $http.get('http://localhost:3000/users/tag_media').
+        success(function(data) {
+
+
+            //$scope.insta=angular.fromJson(data);
+           $scope.insta=data;
+        });
+
+        //$scope.fbs=fb.query();
+    
+
+    })
+//----- work cyrine reservation------////
+
+    .controller('reservationPlaController', function($scope,$http) {
+console.log("ghc");
+       // $http.post('http://localhost:3000/reservation').
+        //success(function(data) {
+//$scope.reserv=angular.fromJson(data);
+          
+       
+        
+        
+        var config = {
+                headers : {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                }
+            }
+
+            $http.post('http://localhost:3000/reservation',{"date_match": 1460481185540,
+    "position": 5 }, config)
+            .success(function (data, status, headers, config) {
+               $scope.reserv=angular.fromJson(data);
+            })
+            .error(function (data, status, header, config) {
+                $scope.ResponseDetails = "Data: " + data +
+                    "<hr />status: " + status +
+                    "<hr />headers: " + header +
+                    "<hr />config: " + config;
+            });
+        })
+
+    
+
+//----- work cyrine weather-------////
+
+.controller('weatherController', function($scope,$http) {
+
+        $http.get('http://localhost:3000/weather').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
+
+        //$scope.fbs=fb.query();
+
+    })
+
+//----- work cyrine instagram-------////
+
+    
+    //----- work raja Actuality-------////
+
+    .controller('FbActuality', function($scope,$http) {
+
+        $http.get('http://localhost:3000/fb/data').
+        success(function(data) {
+
+
+            $scope.fbs=data;
+        });
+
+        //$scope.fbs=fb.query();
+
+    })
+
+
+
+
+
+
+
+
+.controller('ReclamationCtrl', function($scope,$http) {
+   
+    $scope.recalmmer=function(c){
+        var aa={objet:"anobjet",message:"amessage"};
+        $http.post('http://localhost:3000/claim', aa)
+           ;
+
+        };
+    })
+    
+        //end work raja
+    
+   ;
+
+//----- End work cyrrine instagram-------////

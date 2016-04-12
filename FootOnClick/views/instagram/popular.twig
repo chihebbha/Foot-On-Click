@@ -1,0 +1,48 @@
+ {% extends '../layout.twig' %}
+{% block content %}
+<center><h1>Popular media</h1></center>
+    {% for p in pop %}
+   <div id="wrapper">
+  <div id="page-wrapper">
+
+            <div class="container-fluid">
+    
+    
+    <div class="row">
+    
+  <div class="col-sm-2 col-md-2">
+    <div class="thumbnail">
+      <img src="{{p.images.thumbnail.url}}" alt="...">
+      <a href="#"><b>Likes : </b> <span class="badge">{{p.likes.count}}</span></a>
+      <div class="caption">
+        <h3>{{p.location.name}}</h3>
+        <i>Tags</i>
+        <p>{{p.caption.text}}</p>
+        
+        
+        
+        
+        <div class="media">
+  <div class="media-left media-middle">
+    <a href="#">
+      <img class="media-object" src="{{p.comments.data.from.profile_picture}}" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{p.comments.data.text}}</h4>
+    ...
+  </div>
+</div>
+        
+        
+        
+        
+        <p><a href="{{p.link}}" class="btn btn-primary" role="button">Go</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+      </div></div></div>    
+      
+{% endfor %}
+{% endblock %}
