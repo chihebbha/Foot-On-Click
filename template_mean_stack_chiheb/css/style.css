@@ -593,15 +593,15 @@ a.jqTransformSelectOpen {
     height: 270px;
 }
 #arrGauche1{
-   padding-left: 90px; 
-    padding-top: 0px;
+   padding-left: 233px;
+    padding-top: 188px;
     width:40px;
     height:40px;
 position: absolute;
 }
 #arrGauche2{
-   padding-left: 90px; 
-    padding-top: 0px;
+      padding-left: 290px;
+    padding-top: 171px;
     width:40px;
     height:40px;
 position: absolute;
@@ -629,8 +629,8 @@ position: absolute;
 position: absolute;
 }
 #axial2{
-   padding-left: 75px; 
-     padding-top: 45px;
+       padding-left: 121px;
+    padding-top: 109px;
     width:40px;
     height:40px;
 position: absolute;
@@ -653,7 +653,7 @@ position: absolute;
 }
 #aileGauche{
     
-   padding-left: 170px; 
+    padding-left: 234px;
     padding-top: 30px;
     width:40px;
     height:40px;
@@ -661,7 +661,7 @@ position: absolute;
 }
 #aileGauche2{
     
-   padding-left: 170px; 
+    padding-left: 155px;
     padding-top: 30px;
     width:40px;
     height:40px;
@@ -669,8 +669,8 @@ position: absolute;
 }
 #aileDroit{
     
-   padding-left: 170px; 
-    padding-top: 0px;
+      padding-left: 155px;
+    padding-top: 207px;
     width:40px;
     height:40px;
 position: absolute;
@@ -678,8 +678,8 @@ position: absolute;
 }
 #aileDroit2{
     
-   padding-left: 170px; 
-    padding-top: 0px;
+      padding-left: 271px;
+    padding-top: 110px;
     width:40px;
     height:40px;
 position: absolute;
