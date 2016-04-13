@@ -1,5 +1,5 @@
 /**
- * Created by hamdi_chebbi on 12/03/2016.
+ * Created 
  */
 var mongoose= require('../config/db.js') ;
 var refereeSchema = mongoose.Schema({
@@ -19,5 +19,5 @@ var referreSchema = mongoose.Schema({
     hometown: String,
     picture: String
 })
-// le modéle relatif au Schéma -----> lui passer le Schéma
+// 
 module.exports=mongoose.model('user',refereeSchema) ;
