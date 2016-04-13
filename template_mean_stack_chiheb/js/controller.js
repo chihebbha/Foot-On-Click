@@ -22,7 +22,7 @@ if(rangBet==1)
     
     if(rangBet=="match2")
         $scope.match2=true;
-    
+        
     var paris={};
     paris.equipe1=equipe1;
     paris.equipe2=equipe2;
