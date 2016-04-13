@@ -7,7 +7,10 @@
   <div class="main">
     <section id="content" >
 
-        <div class="imageBack" ng-init="reservation1=false;reservation2=false;reservation3=false;reservation4=false;reservation5=false;reservation6=false;" ng-show="!reservation1|| !reservation2|| !reservation3|| !reservation4|| !reservation5|| !reservation6"> 
+        <div class="imageBack" 
+             ng-init="reservation1=false;reservation2=false;reservation3=false;reservation4=false;reservation5=false;reservation6=false;reservation8=false;reservation9=false;reservation10=false;reservation11=false;reservation12=false;
+reservation13=false;" 
+ng-show="!reservation1|| !reservation2|| !reservation3|| !reservation4|| !reservation5|| !reservation6|| !reservation8|| !reservation9|| !reservation10|| !reservation11|| !reservation12|| !reservation13"> 
            <!--
         partie gauche du terrain
 -->
@@ -110,7 +113,7 @@
                  
              <div id="arrDroit2" ng-show="!reservation12">
 <img src="images/Black-Soccer_ball.svg.png" style="width:40px;
-    height:40px;" ng-click="reservation5=true"/>
+    height:40px;" ng-click="reservation12=true"/>
                 </div>
              <div id="arrDroit2" ng-show="reservation12">
 <img src="images/red-football-hi.png" style="width:40px;
@@ -119,7 +122,7 @@
             
             
             
-              <div id="aileDroit" ng-show="!reservation1">
+              <div id="aileDroit" ng-show="!reservation6">
 <img src="images/Black-Soccer_ball.svg.png" style="width:40px;
     height:40px;" ng-click="reservation6=true"/>
                 </div>
@@ -130,9 +133,9 @@
             
               <div id="aileDroit2" ng-show="!reservation13">
 <img src="images/Black-Soccer_ball.svg.png" style="width:40px;
-    height:40px;" ng-click="reservation6=true"/>
+    height:40px;" ng-click="reservation13=true"/>
                 </div>
-           <div id="aileDroit2" ng-show="reservation12">
+           <div id="aileDroit2" ng-show="reservation13">
 <img src="images/red-football-hi.png" style="width:40px;
     height:40px;" ng-click="reservation13=false"/>
                 </div>
@@ -141,7 +144,7 @@
 -->
             
             </div>
-        <div ng-show="reservation1&&reservation2&&reservation3&&reservation4&&reservation5&&reservation6">
+        <div ng-show="reservation1&&reservation2&&reservation3&&reservation4&&reservation5&&reservation6&&reservation8&&reservation9&&reservation10&&reservation11&&reservation12&&reservation13">
         Réservation passée avec succée
         </div>
 
