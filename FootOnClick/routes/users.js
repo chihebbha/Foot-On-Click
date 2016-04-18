@@ -6,7 +6,7 @@ var ig = require('instagram-node').instagram();
 //weather  
 var we = require('weather-js') ; 
 
-//user_id hamdi : 278199704
+//user_id CYRINE : 278199704
 ig.use({ client_id: '88092373fad24e649152152430554170',
          client_secret: '71bfc26f83124a668792c029b6a2ad96' });
 ig.use({ access_token: '224236382.1677ed0.7ce35479a1ab4a678a43ef3c5c6fe637' });
