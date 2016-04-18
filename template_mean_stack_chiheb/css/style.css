@@ -594,93 +594,90 @@ a.jqTransformSelectOpen {
     height: 270px;
 }
 #arrGauche1{
-   padding-left: 233px;
-    padding-top: 188px;
+   margin-left: 233px;
+    margin-top: 188px;
     width:40px;
     height:40px;
 position: absolute;
 }
 #arrGauche2{
-      padding-left: 290px;
-    padding-top: 171px;
+      margin-left: 290px;
+    margin-top: 171px;
     width:40px;
     height:40px;
 position: absolute;
 }
 #arrDroit1{
-   padding-left: 90px; 
- padding-top: 193px;
+      margin-left: 90px;
+ margin-top: 193px;
     width:40px;
     height:40px;
 position: absolute;
 }
 
 #arrDroit2{
-    padding-left: 292px;
-    padding-top: 47px  ;
+  margin-left:292px;
+   margin-top: 47px;
     width:40px;
     height:40px;
 position: absolute;
 }
 #axial{
-   padding-left: 75px; 
-     padding-top: 45px;
+   margin-left: 75px; 
+     margin-top: 45px;
     width:40px;
     height:40px;
 position: absolute;
 }
 #axial2{
-       padding-left: 121px;
-    padding-top: 109px;
+       margin-left: 121px;
+   margin-top: 109px;
     width:40px;
     height:40px;
 position: absolute;
 }
 #gardien{
     
-  padding-left: 26px;
-    padding-top: 119px;
+ margin-left: 26px;
+    margin-top: 119px;
     width:40px;
     height:40px;
     position: absolute;
 }
+
 #gardien2{
     
-    padding-left: 364px;
-    padding-top: 119px;
+       margin-left: 364px;
+   margin-top: 119px;
     width:40px;
     height:40px;
 position: absolute;
 }
 #aileGauche{
-    
-    padding-left: 234px;
-    padding-top: 30px;
+   margin-left: 234px;
+   margin-top: 30px;
     width:40px;
     height:40px;
 position: absolute;
 }
 #aileGauche2{
-    
-    padding-left: 155px;
-    padding-top: 30px;
+    margin-left: 155px;
+    margin-top: 30px;
     width:40px;
     height:40px;
 position: absolute;
 }
 #aileDroit{
-    
-      padding-left: 155px;
-    padding-top: 207px;
+    margin-left: 156px;
+   margin-top: 207px;
     width:40px;
     height:40px;
 position: absolute;
 
 }
 #aileDroit2{
-    
-      padding-left: 271px;
-    padding-top: 110px;
+margin-left: 271px;
+    margin-top: 110px;
     width:40px;
     height:40px;
 position: absolute;
