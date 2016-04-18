@@ -47,6 +47,10 @@ angular.module('footApplication', ['ngRoute','footApplication.controllers','foot
         templateUrl: 'views/actuality.html'
        
       })
+     .when('/statistic', {
+        templateUrl: 'views/statistics.html'
+       
+      })
     ;
     
   }])

@@ -112,55 +112,7 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
     
   }
     
-//  $scope.getCote1=  function (link) {
-//      
-//   $http.get(link).success(function(data){
-//       $scope.data1=data
-//     var  array = [5,6,3,2] ;
-// ( function()
-//   {
-//         
-//            $scope.result = array ; 
-//            console.log(array); 
-//        }
-// )
-//      
-//         ()                  
-//    console.log($scope.data1);
-//       
-//     });
-//        
-//     
-//         
-//    
-//
-//}
-  
-  
-    
-//     $scope.getCote1=function(link){
-//         var defer = $q.defer();
-//             $http.get(link).
-//        success(function(data) {
-//            defer.resolve(22);
-//             // $scope.data1=data.data.head2head.homeTeamWins;
-//                 
-//             $timeout(function() {
-//                  
-//            console.log(defer.promise.$$state.value);
-//             
-//    },1000);
-//                   return defer.promise.$$state.value;
-//        });
-//             
-//        return {
-//    getCote1: $scope.getCote1
-//  };
-//        
-//        
-//     
-//     
-//     };
+
     
     
     
@@ -577,6 +529,101 @@ $http.get('http://api.football-data.org/v1/soccerseasons/394/leagueTable').
     
 })
     
+    
+    //-------- statistics --------------
+    
+    .controller('statistics',function($scope,$http){
+
+    
+         $http.defaults.headers.common['X-Auth-Token'] = '6903147d81d64f048cf2c8117ac49b70';
+    $scope.allbuts=0;
+    
+    
+$http.get('http://api.football-data.org/v1/soccerseasons/394/fixtures?timeFrame=p6').
+        success(function(data) {
+    var buts=0;
+    for(var i=0;i<data.fixtures.length;i++){
+        buts=buts+data.fixtures[i].result.goalsHomeTeam+data.fixtures[i].result.goalsAwayTeam;
+    }
+       $scope.deutchMatch=buts;
+    $scope.allbuts=$scope.allbuts+buts;
+  
+
+        });
+    
+    //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/396/fixtures?timeFrame=p6').
+        success(function(data) {
+         var buts=0;
+    for(var i=0;i<data.fixtures.length;i++){
+        buts=buts+data.fixtures[i].result.goalsHomeTeam+data.fixtures[i].result.goalsAwayTeam;
+    }
+       $scope.frenshMatch=buts;
+    
+           $scope.allbuts=$scope.allbuts+buts;
+
+
+        });
+    
+     //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/398/fixtures?timeFrame=p6').
+        success(function(data) {
+         var buts=0;
+    for(var i=0;i<data.fixtures.length;i++){
+        buts=buts+data.fixtures[i].result.goalsHomeTeam+data.fixtures[i].result.goalsAwayTeam;
+    }
+       $scope.englishMatch=buts;
+        $scope.allbuts=$scope.allbuts+buts;
+
+       
+
+        });
+     //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/399/fixtures?timeFrame=p6').
+        success(function(data) {
+         var buts=0;
+    for(var i=0;i<data.fixtures.length;i++){
+        buts=buts+data.fixtures[i].result.goalsHomeTeam+data.fixtures[i].result.goalsAwayTeam;
+    }
+       $scope.spanishMatch=buts;
+        
+         $scope.allbuts=$scope.allbuts+buts;
+
+       
+
+        });
+     //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/401/fixtures?timeFrame=p6').
+        success(function(data) {
+         var buts=0;
+    for(var i=0;i<data.fixtures.length;i++){
+        buts=buts+data.fixtures[i].result.goalsHomeTeam+data.fixtures[i].result.goalsAwayTeam;
+    }
+       $scope.italianMatch=buts;
+    
+           $scope.allbuts=$scope.allbuts+buts;
+
+
+        });
+        //---------------------------------------------------
+    $http.get('http://api.football-data.org/v1/soccerseasons/401/fixtures?timeFrame=p6').
+        success(function(data) {
+         var buts=0;
+    for(var i=0;i<data.fixtures.length;i++){
+        buts=buts+data.fixtures[i].result.goalsHomeTeam+data.fixtures[i].result.goalsAwayTeam;
+    }
+       $scope.portugalMatch=buts;
+    
+           $scope.allbuts=$scope.allbuts+buts;
+
+
+        });
+    
+    
+    
+})
+    
+  //------------- end statistics -----------  
     
 .controller('instagramController', function($scope,$http) {
 
