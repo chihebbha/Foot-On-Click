@@ -4,6 +4,26 @@ var request=require('request');
 
 var mLab = require('mongolab-data-api')('uvxRwGeN6nKy9oQt5hg7yKYLltgGAbyN');
 
+
+router.get('/user',function(req, res, next){
+
+   
+var options = {
+  database: 'footonclick',
+  collectionName: 'user',
+ };
+ 
+mLab.listDocuments(options, function (err, data) {
+ res.send(data);
+     console.log("user avec succee ");
+});
+
+
+
+});
+
+
+
 router.get('/:pos',function(req, res, next){
 
     mLab.insertDocuments({
@@ -18,4 +38,10 @@ router.get('/:pos',function(req, res, next){
 
 
 });
+
+
+
+
+
+
 module.exports = router;

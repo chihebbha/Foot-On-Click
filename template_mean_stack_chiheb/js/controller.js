@@ -658,6 +658,11 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });   
+            
+                     $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
         }
         
         
@@ -669,7 +674,13 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });     
+                $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
         }
+         
+         
          
           $scope.reserver3 = function ()
         {
@@ -678,7 +689,13 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });
+                 $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
         }
+          
+          
           
            $scope.reserver4 = function ()
         {
@@ -687,6 +704,10 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });
+                  $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
         }
            
            
@@ -697,7 +718,13 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });
+                   $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
         }
+            
+            
             
              $scope.reserver6 = function ()
         {
@@ -706,7 +733,14 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });    
+                 
+                   $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        });      
+                 
         }
+             
              
               $scope.reserver8 = function ()
         {
@@ -715,7 +749,17 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         }); 
+                  
+                     $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
+                  
+                  
         }
+              
+              
+              
                $scope.reserver9 = function ()
         {
             $scope.reservation9= true ; 
@@ -723,7 +767,12 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });   
+                      $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
         }
+               
                
                 $scope.reserver10 = function ()
         {
@@ -732,6 +781,10 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });  
+                       $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
         }
                 
                  $scope.reserver12 = function ()
@@ -741,7 +794,13 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });
+                     
+                        $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
         }
+                 
                  
                   $scope.reserver13 = function ()
         {
@@ -749,6 +808,10 @@ console.log("ghc");
                       $http.get('http://localhost:3000/reservation/Defance5').
         success(function(data) {
             $scope.weath=data;
+        }); 
+                         $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
         }); 
         }
                   
@@ -759,6 +822,11 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });   
+             
+                $http.get('http://localhost:3000/reservation/user').
+        success(function(data) {
+            $scope.users=data;
+        }); 
         }
          })
          
