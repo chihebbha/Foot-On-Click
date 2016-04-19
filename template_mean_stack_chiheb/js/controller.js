@@ -625,6 +625,8 @@ $http.get('http://api.football-data.org/v1/soccerseasons/394/fixtures?timeFrame=
     
   //------------- end statistics -----------  
     
+    //----- work cyrine instagram-------////
+    
 .controller('instagramController', function($scope,$http) {
 
         $http.get('http://localhost:3000/users/tag_media').
@@ -686,7 +688,7 @@ console.log("ghc");
 
     })
 
-//----- work cyrine instagram-------////
+
 
     
     //----- work raja Actuality-------////
@@ -725,4 +727,3 @@ console.log("ghc");
     
    ;
 
-//----- End work cyrrine instagram-------////
