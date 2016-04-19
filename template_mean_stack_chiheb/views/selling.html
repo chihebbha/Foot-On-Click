@@ -150,11 +150,10 @@
         Réservation passée avec succée
        
          <div ng-repeat="user in users">
-            
-            
+        
             {{user.name}}
             
-            </div>
+        <input type="button" ng-click="inviter(user._id.$oid)" value="inviter">  
         
         
         </div>

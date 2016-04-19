@@ -5,6 +5,24 @@ var request=require('request');
 var mLab = require('mongolab-data-api')('uvxRwGeN6nKy9oQt5hg7yKYLltgGAbyN');
 
 
+
+router.get('/inviter/:iduser',function(req, res, next){
+
+    mLab.insertDocuments({
+        database: 'footonclick',
+        collectionName: 'invitation',
+       documents: {date_invitation :Date.now(),userinvited: req.params.iduser}
+    },function(req,res){
+        console.log("ajout  Invitation avec succee ");
+
+
+    });
+
+
+
+});
+
+
 router.get('/user',function(req, res, next){
 
    
@@ -38,6 +56,7 @@ router.get('/:pos',function(req, res, next){
 
 
 });
+
 
 
 

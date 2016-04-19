@@ -697,6 +697,10 @@ console.log("ghc");
           
           
           
+          
+          
+          
+          
            $scope.reserver4 = function ()
         {
             $scope.reservation4= true ;
@@ -828,6 +832,19 @@ console.log("ghc");
             $scope.users=data;
         }); 
         }
+         
+         
+         $scope.inviter = function (id)
+         {
+         
+                 $http.get('http://localhost:3000/reservation/inviter/'+id).
+        success(function(data) {
+            alert ("succ"); 
+        });  
+         
+         }
+         
+         
          })
          
        
