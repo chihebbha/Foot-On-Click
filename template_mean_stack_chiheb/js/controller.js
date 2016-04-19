@@ -645,6 +645,71 @@ $http.get('http://api.football-data.org/v1/soccerseasons/394/fixtures?timeFrame=
 
     .controller('reservationPlaController', function($scope,$http) {
 console.log("ghc");
+        
+        
+        $scope.reserver1 = function ()
+        {
+            $scope.reservation1= true ;
+            
+        }
+         $scope.reserver2 = function ()
+        {
+            $scope.reservation2= true ;
+            
+        }
+          $scope.reserver3 = function ()
+        {
+            $scope.reservation3= true ;
+            
+        }
+           $scope.reserver4 = function ()
+        {
+            $scope.reservation4= true ;
+            
+        }
+            $scope.reserver5 = function ()
+        {
+            $scope.reservation5= true ;
+            
+        }
+             $scope.reserver6 = function ()
+        {
+            $scope.reservation6= true ;
+            
+        }
+              $scope.reserver8 = function ()
+        {
+            $scope.reservation8= true ;
+            
+        }
+               $scope.reserver9 = function ()
+        {
+            $scope.reservation9= true ;
+            
+        }
+                $scope.reserver10 = function ()
+        {
+            $scope.reservation10= true ;
+            
+        }
+                 $scope.reserver12 = function ()
+        {
+            $scope.reservation12= true ;
+            
+        }
+                  $scope.reserver13 = function ()
+        {
+            $scope.reservation13= true ;
+            
+        }
+         $scope.reserver11 = function ()
+        {
+            $scope.reservation11= true ;
+            
+        }
+
+        
+       
        // $http.post('http://localhost:3000/reservation').
         //success(function(data) {
 //$scope.reserv=angular.fromJson(data);
