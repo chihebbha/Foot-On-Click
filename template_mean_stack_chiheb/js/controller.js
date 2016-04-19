@@ -647,68 +647,147 @@ $http.get('http://api.football-data.org/v1/soccerseasons/394/fixtures?timeFrame=
 console.log("ghc");
         
         
+        
+        
+        
+        
         $scope.reserver1 = function ()
         {
             $scope.reservation1= true ;
+             $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
+
             
         }
          $scope.reserver2 = function ()
         {
             $scope.reservation2= true ;
+             // $scope.reservation3= false ;
+               $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
           $scope.reserver3 = function ()
         {
             $scope.reservation3= true ;
+                $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
            $scope.reserver4 = function ()
         {
             $scope.reservation4= true ;
+                 $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
             $scope.reserver5 = function ()
         {
             $scope.reservation5= true ;
+                  $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
              $scope.reserver6 = function ()
         {
             $scope.reservation6= true ;
+                   $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
               $scope.reserver8 = function ()
         {
-            $scope.reservation8= true ;
+            $scope.reservation8= true ;  
+                  $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
                $scope.reserver9 = function ()
         {
-            $scope.reservation9= true ;
+            $scope.reservation9= true ; 
+                   $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
                 $scope.reserver10 = function ()
         {
-            $scope.reservation10= true ;
+            $scope.reservation10= true ;  
+                    $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
                  $scope.reserver12 = function ()
         {
-            $scope.reservation12= true ;
+            $scope.reservation12= true ; 
+                     $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
                   $scope.reserver13 = function ()
         {
-            $scope.reservation13= true ;
+            $scope.reservation13= true ;  
+                      $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
          $scope.reserver11 = function ()
         {
-            $scope.reservation11= true ;
+            $scope.reservation11= true ;  
+             $http.get('http://localhost:3000/reservation').
+        success(function(data) {
+
+
+            $scope.weath=data;
+        });
             
         }
 
-        
+         })
+         
        
        // $http.post('http://localhost:3000/reservation').
         //success(function(data) {
@@ -716,14 +795,15 @@ console.log("ghc");
           
        
         
+//----- work cyrine rreservation -------////
         
-        var config = {
+       /* var config = {
                 headers : {
                     'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
                 }
             }
 
-            $http.post('http://localhost:3000/reservation',{"date_match": 1460481185540,
+            $http.get('http://localhost:3000/reservation',{"date_match": 1460481185540,
     "position": 5 }, config)
             .success(function (data, status, headers, config) {
                $scope.reserv=angular.fromJson(data);
@@ -735,7 +815,7 @@ console.log("ghc");
                     "<hr />config: " + config;
             });
         })
-
+*/
     
 
 //----- work cyrine weather-------////
