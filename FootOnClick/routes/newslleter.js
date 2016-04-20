@@ -9,7 +9,7 @@ var smtpTransport = mailer.createTransport("SMTP",{
         pass: "azerty100"
     }
 });
-router.get('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
     var mail = {
         from: 'bmt.transportpublic@gmail.com',
         to: req.body.user.email,

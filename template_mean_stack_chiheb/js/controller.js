@@ -881,6 +881,9 @@ console.log("ghc");
 
 .controller('weatherController', function($scope,$http) {
 
+        
+        
+        
         $http.get('http://localhost:3000/weather').
         success(function(data) {
 

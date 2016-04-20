@@ -20,6 +20,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var weather = require('./routes/weather');
 var reservation = require('./routes/reservation');
+var newslleter = require('./routes/newslleter');
 
 var http = require('http') ;
 var twig = require('twig') ;
@@ -81,6 +82,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/weather', weather);
 app.use('/reservation', reservation);
+app.use('/newslleter', newslleter);
 
 app.use('/frenshMatch', frenshMatch);
 app.use('/deutshMatch', deutshMatch);
