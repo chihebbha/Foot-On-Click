@@ -10,7 +10,7 @@
               
 
         partie gauche du terrain
--->
+
             
             
             
@@ -152,8 +152,9 @@
          <div ng-repeat="user in users">
         
             {{user.name}}
-            
-        <input type="button" ng-click="inviter(user._id.$oid)" value="inviter">  
+             <span>&nbsp;</span>
+        <input type="button" ng-click="inviter(user._id.$oid)" value="inviter"  >  
+             <span>&nbsp;</span> <a href="#" class="button">inviter</a> 
         
         
         </div>

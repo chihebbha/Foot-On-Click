@@ -881,6 +881,9 @@ console.log("ghc");
 
 .controller('weatherController', function($scope,$http) {
 
+        
+        
+        
         $http.get('http://localhost:3000/weather').
         success(function(data) {
 
@@ -892,6 +895,24 @@ console.log("ghc");
 
     })
 
+    
+    
+    NewsletterController
+    
+//----- work cyrine neslterr-------////
+
+.controller('NewsletterController', function($scope,$http) {
+
+        $http.get('http://localhost:3000/newslleter').
+        success(function(data) {
+
+
+            $scope.news=data;
+        });
+
+        //$scope.fbs=fb.query();
+
+    })
 
 
     
