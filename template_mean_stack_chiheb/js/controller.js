@@ -897,7 +897,7 @@ console.log("ghc");
 
     
     
-    NewsletterController
+    
     
 //----- work cyrine neslterr-------////
 
