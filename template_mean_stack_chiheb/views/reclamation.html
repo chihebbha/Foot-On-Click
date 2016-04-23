@@ -2,13 +2,33 @@
 <div ng-controller="ReclamationCtrl">
 <form method="post">
 
-    <input type="text" name="objet" data-ng-model="claim.objet">
+    <div class="con-for">
+        <h2 class="pad_bot1 pad_top1">Claim</h2>
+
+        <div class="form-field contact-name">
+            <span>Subject :</span>
+    <input type="text" class="con-txt" placeholder="Subject" maxlength=20 minlength=5  ng-pattern="[a-zA-Z]" data-ng-model="claim.objet">
+            </div>
     <br>
     <br>
-    <input type="text" name="message" data-ng-model="claim.message">
+        <div class="form-field contact-email">
+            <span> Text :</span>
+        <input type="text" name="message"  class="con-txt" placeholder="Text" maxlength=20 minlength=5  ng-pattern="[a-zA-Z]"  data-ng-model="claim.message">
+            </div>
     <br>
-    <br>
-    <input type="submit" ng-click="recalmmer(claim)">
+
+
+     <div class="form-field contact-btn">   <span>&nbsp;</span> <a href="#" class="button">send</a>  </div>
+
+        <div class="form-field news-chk">
+
+
+            <label for="1" > I agree to send my claim </label>
+
+    <input  type="checkbox" ng-click="recalmmer(claim)" id="1" required />
+
+        </div>
+        </div>
 </form>
 
 </div>
