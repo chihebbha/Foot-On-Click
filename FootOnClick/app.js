@@ -11,6 +11,8 @@ var FB = require('fb');
 
 var FBroute = require('./routes/fb');
 
+var chat = require('./routes/chat');
+
 
 
 //-----------------End Raja
@@ -84,16 +86,23 @@ app.use('/weather', weather);
 app.use('/reservation', reservation);
 app.use('/newslleter', newslleter);
 
+//cyrine
 app.use('/frenshMatch', frenshMatch);
 app.use('/deutshMatch', deutshMatch);
 app.use('/englishMatch', englishMatch);
 app.use('/spanishMatch', spanishMatch);
 
 
+
+
+
+
+//raja
+app.use('/chat', chat);
 app.use('/fb',FBroute);
-//app.use('/claim',require('./routes/claim'));
 app.use('/claim',require('./routes/claim'));
-//cyrine
+
+//raja
 // catch 404 and forward to error handler
 
 
