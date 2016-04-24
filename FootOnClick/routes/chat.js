@@ -13,7 +13,7 @@ var httpServer = http.createServer(function (req, res) {
 
     res.end("hello raaja jlidi");
 });
-httpServer.listen(port, '127.0.0.1');
+//httpServer.listen(port, '127.0.0.1');
 
 
 

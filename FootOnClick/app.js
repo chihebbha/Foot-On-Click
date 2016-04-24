@@ -99,8 +99,9 @@ app.use('/spanishMatch', spanishMatch);
 
 //raja
 app.use('/chat', chat);
-app.use('/fb',FBroute);
 app.use('/claim',require('./routes/claim'));
+app.use('/fb',FBroute);
+
 
 //raja
 // catch 404 and forward to error handler

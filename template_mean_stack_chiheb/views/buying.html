@@ -31,7 +31,7 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                      
-                     <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ng-show="!match1"> <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1" ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                     <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1" ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
                      
                      
                      
@@ -51,7 +51,7 @@
                              </b>
                         
                          <div > <img style=" width:30px;
-    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/>_<b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>_
+    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
                             
                              
                              <img style=" width:30px;
@@ -71,7 +71,7 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                      
-                     <td  ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ng-show="!match1"><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                     <td  ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
                      
                      
                      
@@ -100,42 +100,7 @@
                             </div> 
                            </td>  
               </tr>
-                 <tr ng-repeat="nn in NextspanishMatch">
-                   
-            <td>   {{nn.homeTeamName}} </td>
-                     
-                     
-                     <td style="padding-left: 100px" ng-show="!match1" ng-init=" getCote1(nn._links.self.href)"><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
-                     
-                     
-                     
-                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">{{nn.result.goalsHomeTeam}}</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">{{nn.result.goalsAwayTeam}}</b><br></td>
-                     
-                     
-                     
-                     
-                     
-                     
-                     <td style="padding-left: 100px">{{nn.awayTeamName}}<br><br><br>
-                        
-                         </td>
-                     <td style="margin-left:20px"  ng-init="getImageEquipe(nn._links.homeTeam.href)">
-                            <!--ng-if="nn.status=='IN_PLAY'"--> 
-                         <b style="margin-left:15px;background-color:black" ng-if="nn.status=='TIMED'">
-                             {{nn.date | date:'HH:mm'}}
-                             </b>
-                         <div > <img style=" width:30px;
-    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
-                            
-                             
-                             <img style=" width:30px;
-    height:40px " ng-src="{{showTeam(nn.awayTeamName)}}"/>
-                            <br> <b ng-if="nn.status=='TIMED'">
-                             {{nn.date | date:'yyyy-MM-dd'}}
-                             </b>
-                            </div> 
-                           </td> 
-              </tr>
+                 
                
                  
                  
@@ -148,7 +113,7 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                      
-                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ng-show="!match1"><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
                      
                      
                      
@@ -186,7 +151,7 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                      
-                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ng-show="!match1"> <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
                      
                      
                      
@@ -227,7 +192,7 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                      
-                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ng-show="!match1"><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
                      
                      
                      
@@ -263,7 +228,7 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                      
-                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ng-show="!match1"> <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
                      
                      
                      
@@ -301,7 +266,7 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                       
-                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ng-show="!match1"   > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input  style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/></div><br></td>
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px"    > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input  style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/></div><br></td>
                      
                      
                      
@@ -345,7 +310,7 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                       
-                 <td style="padding-left: 100px" ng-show="!match1" ng-init=" getCote1(nn._links.self.href)"><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                 <td style="padding-left: 100px"  ng-init=" getCote1(nn._links.self.href)"><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
                      
                      
                      
