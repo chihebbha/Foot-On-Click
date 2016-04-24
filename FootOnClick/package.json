@@ -12,6 +12,7 @@
     "debug": "~2.2.0",
     "express": "~4.13.1",
     "express-session": "^1.13.0",
+    "fb": "^1.0.2",
     "http": "0.0.0",
     "jade": "~1.11.0",
     "mongolab-data-api": "^1.1.4",
@@ -20,6 +21,7 @@
     "querystring": "^0.2.0",
     "request": "^2.69.0",
     "serve-favicon": "~2.3.0",
+    "socket.io": "^1.4.5",
     "twig": "^0.8.8",
     "web-analyst": "~1.5.4"
   }
