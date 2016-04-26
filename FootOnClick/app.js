@@ -6,12 +6,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
+
 //---------Raja ---------
 var FB = require('fb');
 
 var FBroute = require('./routes/fb');
 
 var chat = require('./routes/chat');
+
+var client = require('twilio')('AC03d7e8686873ebfaeb3ac18152907fdb', '1d208037b2e7e1f9b904509a64c4c34f');
+
 
 
 
@@ -101,6 +105,27 @@ app.use('/spanishMatch', spanishMatch);
 app.use('/chat', chat);
 app.use('/claim',require('./routes/claim'));
 app.use('/fb',FBroute);
+
+// raja sms
+
+
+app.get('/testtwilio', function (req, res) {
+    client.sendMessage({
+        to: '+21626722919',
+        from: '+14439917726',
+        body: 'partie 14h.'
+    }, function (err, data) {
+        if (err)
+
+            console.log(err);
+        console.log(data);
+
+    });
+});
+
+
+
+//end raja sms
 
 
 //raja
