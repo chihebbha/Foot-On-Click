@@ -12,6 +12,10 @@ angular.module('footApplication', ['ngRoute','footApplication.controllers','foot
     .when('/buying', {
         templateUrl: 'views/buying.html' 
       })
+	  
+	   .when('/chat', {
+        templateUrl: 'views/chat.html' 
+      })
     
     .when('/selling', {
         templateUrl: 'views/selling.html' 
