@@ -51,7 +51,7 @@ angular.module('footApplication', ['ngRoute','footApplication.controllers','foot
         templateUrl: 'views/actuality.html'
        
       })
-    .when('/Map', {
+    .when('/About', {
         templateUrl: 'views/map2.html'
       })
      .when('/statistic', {
