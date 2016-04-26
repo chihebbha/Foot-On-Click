@@ -1006,7 +1006,7 @@ console.log("ghc");
     })
 
 
-    //cyrine map//
+    //cyrine map1 //
    
 
 .controller('mapController', function($http, $interval, NgMap) {
@@ -1040,7 +1040,7 @@ console.log("ghc");
     ////
     
    
-    ///cyruine///
+    ///cyruine map2///
     
     .controller('MyCtrl', function($interval, NgMap) {
         var map, i=0, interval, chats = document.querySelectorAll('#chats li');
@@ -1052,6 +1052,8 @@ console.log("ghc");
           var el = chats[i];
           map.customMarkers.usa.setVisible(false);
           map.customMarkers.can.setVisible(false);
+            map.customMarkers.tn.setVisible(true);
+            map.customMarkers.fr.setVisible(true);
           map.customMarkers[el.className].setContent(el.innerHTML);
           map.customMarkers[el.className].setVisible(true);
           map.customMarkers[el.className].draw();
