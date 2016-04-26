@@ -5,13 +5,13 @@ var mailer=require('nodemailer');
 var smtpTransport = mailer.createTransport("SMTP",{
     service: "Gmail",
     auth: {
-        user: "bmt.transportpublic@gmail.com",
-        pass: "azerty100"
+        user: "cyrine.arbi@esprit.tn",
+        pass: "cyrina99"
     }
 });
 router.post('/', function(req, res, next) {
     var mail = {
-        from: 'bmt.transportpublic@gmail.com',
+        from: 'cyrine.arbi@esprit.tn',
         to: req.body.user.email,
        
         name: req.body.user.name
@@ -36,3 +36,46 @@ router.post('/', function(req, res, next) {
 
 
 module.exports = router;
+
+
+
+//var randtoken = require('rand-token');
+//var nodemailer = require('nodemailer');
+//var email = require('emailjs');
+//var flash = require('connect-flash');
+//var express = require('express');
+//var router = express.Router();
+//
+//
+//router.get('/send_mail', function(req, res, next){
+//	
+//	EmailVerif("mail de reception");
+//	
+//	res.send("Mail Envoye avec succes");
+//}) ;
+// 
+//EmailVerif = function(recepient) {
+//  var transporter = nodemailer.createTransport("SMTP", {
+//    service: 'Gmail',
+//    auth: {
+//      user: 'votre mail',
+//      pass: '*******'
+//    }
+//  });
+//  var mailOptions = {
+//    from: ' votre mail',
+//    to: recepient,
+//    subject: 'subject',
+//    text: 'Bonjour Equipe IRIS . jai un problËme ?'
+//  };
+//  transporter.sendMail(mailOptions, function(error, info) {
+//    if (error) {
+//      return console.log(error);
+//    } else {
+//      console.log('Email Sent');
+//    }
+//  });
+//};
+//
+//
+//module.exports = router;

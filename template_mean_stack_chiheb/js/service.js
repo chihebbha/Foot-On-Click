@@ -24,3 +24,13 @@ this.getData = function(link) {
         return $resource('http://api.football-data.org/v1/soccerseasons/1/fixtures');
 
     });
+
+
+//.factory('SendMailFactory', function($resource){
+//        //Resource
+//        return $resource('http://localhost:3000/mail/send_mail',null, 
+//	{
+//            'query':  {method:'GET', isArray:true}
+//        });
+//
+//    });

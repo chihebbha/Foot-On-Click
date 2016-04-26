@@ -1004,6 +1004,37 @@ console.log("ghc");
         //$scope.fbs=fb.query();
 
     })
+    
+//    angular.module('myApp.SendMail', ['ngRoute','ngResource'])
+//
+//.config(['$routeProvider', function($routeProvider) {
+//  $routeProvider.when('/SendMail', {
+//    templateUrl: 'mail/SendMail.html',
+//    controller: 'SendMailCtrl'
+//  });
+//}])
+//
+//
+//.controller('SendMailCtrl', function($scope, SendMailFactory) {
+//    
+//        $scope.SendMail=SendMailFactory.query();
+//	console.log($scope.SendMail);
+//
+//})
+//
+// 
+// .factory('SendMailFactory', function($resource){
+//        //Resource
+//        return $resource('http://localhost:3000/mail/send_mail',null, 
+//	{
+//            'query':  {method:'GET', isArray:true}
+//        });
+//
+//    })
+//
+//
+//
+//;
 
 
     //cyrine map1 //
