@@ -2,12 +2,23 @@
 
 <!-- content -->
 
- 
-          <div class="pad2">
+   <nav style="padding-left:180px;" >
+  <ul class="pagination"  ng-init="jour1=1;jour2=0;">
+   
+    <li ng-click="jour1=1;jour2=0;"><a>Today {{date0 | date:'EEE d-MMM'}}</a></li>
+    <li ng-click="jour1=0;jour2=1;"><a>Tomorrow {{date1 | date:'EEE d-MMM'}}</a></li>
+    
+   
+  </ul>
+</nav>
+         
+<!---------------------match of the day -------------------------->
+
+          <div class="pad_left1" ng-if="jour1==1">
+            <div class="pad2">
+              
             <center><h2 class="pad_bot1 pad_top1">Matchs of the day</h2></center>
           </div>
-          <div class="pad_left1">
-            
              <table ng-controller="GetAllBetItalia">
                 
                       <tr>
@@ -65,7 +76,7 @@
                  
                  
                  
-                 <th style=": center" ng-if="(spanishMatch.length) != 0 ||(NextspanishMatch.length)!=0">-----------------------<br><u>| Spanish league |</u><br>-----------------------</th>
+                 <th style=": center" ng-if="(spanishMatch.length) != 0">-----------------------<br><u>| Spanish league |</u><br>-----------------------</th>
                  <tr ng-repeat="nn in spanishMatch">
                      
             <td>   {{nn.homeTeamName}}</td>
@@ -348,9 +359,412 @@
               
            
                  </div>
-     <div>
 
-</div>
+<!---------------- end match of the day--------------------------->
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------match of the tommorow -------------------------->
+          <div class="pad_left1" ng-if="jour2==1">
+             <div class="pad2">
+              
+            <center><h2 class="pad_bot1 pad_top1">Matchs of tomorrow</h2></center>
+          </div>
+             <table ng-controller="GetAllBetItalia">
+                
+                      <tr>
+                     
+            <td>   <b>Home</b></td><td style="padding-left: 100px"><b style="padding-left: 10px"> 1 </b><b style="padding-left: 30px"> X </b><b style="padding-left: 35px"> 2</b></td><td style="padding-left: 100px"><b>Away</b>
+                          <br><br><br></td>
+                          
+                          <td style="padding-left: 20px"><b>score</b>
+                          <br><br><br></td>
+                          
+              </tr>
+                 
+                 
+
+
+
+                 <th ng-if="italianMatch1.length != 0" style=": center">-----------------------<br><u>| Italian league |</u><br>-----------------------</th>
+                 <tr ng-repeat="nn in italianMatch1">
+                     
+                     
+            <td>   {{nn.homeTeamName}}</td>
+                     
+                     
+                     <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1" ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                     
+                     
+                     
+                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+                     
+                     
+                     
+                     
+                     
+                     
+                     <td style="padding-left: 100px">{{nn.awayTeamName}}<br><br><br> </td>
+                    <td style="margin-left:20px"  ng-init="getImageEquipe(nn._links.homeTeam.href)">
+                            <!--ng-if="nn.status=='IN_PLAY'"--> 
+                        
+                    <b style="margin-left:15px;background-color:black" ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'HH:mm'}}
+                             </b>
+                        
+                         <div > <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
+                            
+                             
+                             <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.awayTeamName)}}"/>
+                            <br> <b ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'yyyy-MM-dd'}}
+                             </b>
+                            </div> 
+                           </td>   
+              </tr>
+                 
+                 
+                 
+                 <th style=": center" ng-if="(spanishMatch1.length) != 0">-----------------------<br><u>| Spanish league |</u><br>-----------------------</th>
+                 <tr ng-repeat="nn in spanishMatch1">
+                     
+            <td>   {{nn.homeTeamName}}</td>
+                     
+                     
+                     <td  ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                     
+                     
+                     
+                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+                     
+                     
+                     
+                     
+                     
+                     
+                     <td style="padding-left: 100px">{{nn.awayTeamName}}<br><br><br> </td>
+                        <td style="margin-left:20px"  ng-init="getImageEquipe(nn._links.homeTeam.href)">
+                            <!--ng-if="nn.status=='IN_PLAY'"-->   
+                            <b style="margin-left:15px;background-color:black" ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'HH:mm'}}
+                             </b>
+                         <div > <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
+                            
+                             
+                             <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.awayTeamName)}}"/>
+                            <br> <b ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'yyyy-MM-dd'}}
+                             </b>
+                            </div> 
+                           </td>  
+              </tr>
+                 
+               
+                 
+                 
+                 
+                 
+                 
+<th style=": center" ng-if="deutchMatch1.length != 0">-----------------------<br><u>| Bundesliga |</u><br>-----------------------</th>                 
+                       <tr ng-repeat="nn in deutchMatch1">
+                     
+            <td>   {{nn.homeTeamName}}</td>
+                     
+                     
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                     
+                     
+                     
+                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+                     
+                     
+                     
+                     
+                     
+                     
+                     <td style="padding-left: 100px">{{nn.awayTeamName}}<br><br><br> </td>
+                     <td style="margin-left:20px"  ng-init="getImageEquipe(nn._links.homeTeam.href)">
+                            <!--ng-if="nn.status=='IN_PLAY'"--> 
+                         <b style="margin-left:15px;background-color:black" ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'HH:mm'}}
+                             </b>
+                         <div > <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
+                            
+                             
+                             <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.awayTeamName)}}"/>
+                            <br> <b ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'yyyy-MM-dd'}}
+                             </b>
+                            </div> 
+                           </td>   
+              </tr>
+                 
+                 
+                 
+                 <th ng-if="frenshMatch1.length != 0" style=": center">-----------------------<br><u>| Ligue francaise |</u><br>-----------------------</th>                 
+                       <tr ng-repeat="nn in frenshMatch1">
+                     
+            <td>   {{nn.homeTeamName}}</td>
+                     
+                     
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                     
+                     
+                     
+                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+                     
+                     
+                     
+                     
+                     
+                     
+                     <td style="padding-left: 100px">{{nn.awayTeamName}}<br><br><br> </td>
+                     <td style="margin-left:20px"  ng-init="getImageEquipe(nn._links.homeTeam.href)">
+                            <!--ng-if="nn.status=='IN_PLAY'"--> 
+                         <b style="margin-left:15px;background-color:black" ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'HH:mm'}}
+                             </b>
+                         <div > <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
+                            
+                             
+                             <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.awayTeamName)}}"/>
+                            <br> <b ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'yyyy-MM-dd'}}
+                             </b>
+                            </div> 
+                           </td>  
+              </tr>
+                 
+                 
+                 
+                 
+                 
+                 
+                 <th ng-if="premierLigue1.length != 0" style=": center">-----------------------<br><u>| Premier ligue |</u><br>-----------------------</th>                 
+                       <tr ng-repeat="nn in premierLigue1">
+                     
+            <td>   {{nn.homeTeamName}}</td>
+                     
+                     
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                     
+                     
+                     
+                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+                     
+                     
+                     
+                     
+                     
+                     
+                     <td style="padding-left: 100px">{{nn.awayTeamName}}<br><br><br> </td>
+                         <td style="margin-left:20px"  ng-init="getImageEquipe(nn._links.homeTeam.href)">
+                            <!--ng-if="nn.status=='IN_PLAY'"-->   
+                             <b style="margin-left:15px;background-color:black" ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'HH:mm'}}
+                             </b>
+                         <div > <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
+                            
+                             
+                             <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.awayTeamName)}}"/>
+                            <br> <b ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'yyyy-MM-dd'}}
+                             </b>
+                            </div> 
+                           </td>    
+              </tr>
+                 
+                  <th ng-if="portugalLigue1.length != 0" style=": center">-----------------------<br><u>| Portugal ligue |</u><br>-----------------------</th>                 
+                       <tr ng-repeat="nn in portugalLigue1">
+                     
+            <td>   {{nn.homeTeamName}}</td>
+                     
+                     
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                     
+                     
+                     
+                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+                     
+                     
+                     
+                     
+                     
+                     
+                     <td style="padding-left: 100px">{{nn.awayTeamName}}<br><br><br> </td>
+                      <td style="margin-left:20px"  ng-init="getImageEquipe(nn._links.homeTeam.href)">
+                            <!--ng-if="nn.status=='IN_PLAY'"-->  
+                          <b style="margin-left:15px;background-color:black" ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'HH:mm'}}
+                             </b>
+                         <div > <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
+                            
+                             
+                             <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.awayTeamName)}}"/>
+                            <br> <b ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'yyyy-MM-dd'}}
+                             </b>
+                            </div> 
+                           </td>  
+              </tr>
+                 
+                 
+                 
+                    <th ng-if="championsLeague1.length != 0" style=": center">-------------------------------<br><u>| Champions League |</u><br>-------------------------------</th>                 
+                       <tr ng-repeat="nn in championsLeague1" >
+                    
+            <td>   {{nn.homeTeamName}}</td>
+                     
+                      
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px"    > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input  style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/></div><br></td>
+                     
+                     
+                     
+                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+                          
+                     
+                     
+                     
+                     
+                       
+                     
+                     <td style="padding-left: 100px">{{nn.awayTeamName}}<br><br><br> </td>
+                         
+                        <td style="margin-left:20px"  ng-init="getImageEquipe(nn._links.homeTeam.href)">
+                            <!--ng-if="nn.status=='IN_PLAY'"-->  
+                            <b style="margin-left:15px;background-color:black" ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'HH:mm'}}
+                             </b>
+                         <div > <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
+                            
+                             
+                             <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.awayTeamName)}}"/>
+                            <br> <b ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'yyyy-MM-dd '}}
+                             </b>
+                            </div> 
+                           </td> 
+                        
+                          
+                     
+              </tr>
+                 
+             {{data1}}
+                 
+                 
+                 
+                       <th ng-if="others.length != 0" style=": center">-------------------------------<br><u>| Others |</u><br>-------------------------------</th>                            <tr ng-repeat="nn in others">
+                    
+            <td>   {{nn.homeTeamName}}</td>
+                     
+                      
+                 <td style="padding-left: 100px"  ng-init=" getCote1(nn._links.self.href)"><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                     
+                     
+                     
+                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+                          
+                     
+                     
+                     
+                     
+                       
+                     
+                     <td style="padding-left: 100px">{{nn.awayTeamName}}<br><br><br> </td>
+                         
+                       <td style="margin-left:20px"  ng-init="getImageEquipe(nn._links.homeTeam.href)">
+                            <!--ng-if="nn.status=='IN_PLAY'"-->   
+                         <div > <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.homeTeamName)}}"/><b ng-if="nn.status=='IN_PLAY'">  {{nn.result.goalsHomeTeam}} - {{nn.result.goalsAwayTeam}} </b>
+                            
+                             
+                             <img style=" width:30px;
+    height:40px " ng-src="{{showTeam(nn.awayTeamName)}}"/>
+                            <br> <b ng-if="nn.status=='TIMED'">
+                             {{nn.date | date:'yyyy-MM-dd'}}
+                             </b>
+                            </div> 
+                           </td> 
+                        
+                          
+                     
+              </tr>
+
+                 
+              
+                </table>
+              
+           
+                 </div>
+
+<!---------------- end match of the tommorow--------------------------->
+     
+
+
+
 <!-- / content -->
 
 
