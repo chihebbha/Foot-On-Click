@@ -1,4 +1,4 @@
-    angular.module('footApplication.controllers', [])
+    angular.module('footApplication.controllers', ['ngMap'])
 
 .controller('BetInFicheParis',function($scope){
     
@@ -915,6 +915,64 @@ console.log("ghc");
     })
 
 
+    //cyrine map//
+   
+
+.controller('mapController', function($http, $interval, NgMap) {
+  var vm = this;
+  vm.positions = [
+    [54.779951, 9.334164], [47.209613, 15.991539],
+    [51.975343, 7.596731], [51.97539, 7.596962], 
+    [47.414847, 8.23485], [47.658028, 9.159596],
+    [47.525927, 7.68761], [50.85558, 9.704403],
+    [54.320664, 10.285977], [49.214374, 6.97506],
+    [52.975556, 7.596811], [52.975556, 7.596811],
+    [52.975556, 7.596811], [52.975556, 7.596811], 
+    [52.975556, 7.596811], [52.975556, 7.596811],
+    [52.975556, 7.596811], [52.975556, 7.596811],
+    [52.975556, 7.596811], [52.975556, 7.596811]];
+    
+    vm.dynMarkers = []
+    NgMap.getMap().then(function(map) {
+      var bounds = new google.maps.LatLngBounds();
+      for (var k in map.customMarkers) {
+        var cm = map.customMarkers[k];
+        vm.dynMarkers.push(cm);
+        bounds.extend(cm.getPosition());
+      };
+      
+      vm.markerClusterer = new MarkerClusterer(map, vm.dynMarkers, {});
+      map.setCenter(bounds.getCenter());
+      map.fitBounds(bounds);  
+   });
+})
+    ////
+    
+   
+    ///cyruine///
+    
+    .controller('MyCtrl', function($interval, NgMap) {
+        var map, i=0, interval, chats = document.querySelectorAll('#chats li');
+        NgMap.getMap().then(function(evtMap) {
+          map = evtMap;
+          interval = $interval(talk, 2000);
+        });
+        var talk = function(){
+          var el = chats[i];
+          map.customMarkers.usa.setVisible(false);
+          map.customMarkers.can.setVisible(false);
+          map.customMarkers[el.className].setContent(el.innerHTML);
+          map.customMarkers[el.className].setVisible(true);
+          map.customMarkers[el.className].draw();
+          i++;
+          (i >= chats.length) && $interval.cancel(interval);
+        };
+      })
+    
+    
+    
+    
+    
     
     //----- work raja Actuality-------////
 
@@ -932,6 +990,12 @@ console.log("ghc");
     })
 
 
+    
+    
+    
+    
+    
+    
 
 
 

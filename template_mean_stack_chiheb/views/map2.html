@@ -1,0 +1,52 @@
+
+  <body id="bodycyrine">
+      
+      <div id="myMap">
+      
+      
+
+      
+      <link rel="stylesheet" href="css/stylecyrine.css" type="text/css" media="all">
+    <div ng-controller="MyCtrl">
+         
+      {{world}}
+      <ng-map zoom="2" center="toronto, canada" style="height:300px">
+        <custom-marker id="can" position="canada" on-click="click()">
+        <div><b>Hi, USA</b>
+          <img src="http://icons.iconarchive.com/icons/custom-icon-design/2014-world-cup-flags/32/USA-icon.png" />
+        </div>
+        </custom-marker>
+        <custom-marker id="usa" position="united state of america">
+        <div><b>Hello, Canada</b>
+          <img src="http://icons.iconarchive.com/icons/gosquared/flag/32/Canada-flat-icon.png" />
+        </div>
+        </custom-marker>
+      </ng-map>
+      <ul id="chats">
+        <li class="usa"> <span><b>We are alike, right?</b></span>
+        <li class="can"> <span><b>Yes, we are</b></span>
+        <li class="usa"> <span><b>We have freedom of speech.</b></span>
+        <li class="can"> <span><b>Yes, we also have free market.</b></span>
+        <li class="usa"> <span><b>We have president.</b></span>
+        <li class="can"> <span><b>Hmm, Canada has prime minister.</b></span>
+        <li class="usa">
+          <span><b>We have freedom of guns!!!.</b><br/>
+            <img src="http://icons.iconarchive.com/icons/icons8/windows-8/64/Military-Firing-Gun-icon.png" width-="32"/>
+          </span>
+        <li class="can"> <span><b>...</b></span>
+        <li class="usa"> <span><b>...</b></span>
+        <li class="can"> 
+          <span>
+            <b>We have free health care!!!</b><br/>
+            <img src="http://icons.iconarchive.com/icons/gosquared/flag/64/Red-Cross-flat-icon.png" width="32" />
+          </span>
+        <li class="usa"> <span><b>...</b></span>
+        <li class="can"> <span><b>...</b></span>
+        <li class="usa"> <span><b>Bye Candaa</b></span>
+        <li class="can"> <span><b>Bye</b></span>
+      </ul>
+    </div>
+          </div>
+  </body>
+
+

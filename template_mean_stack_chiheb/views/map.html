@@ -1,0 +1,39 @@
+
+
+
+<div ng-controller="mapController" class="bodycyrine">
+
+
+
+
+
+
+
+<body ng-controller="mapController as vm">
+  <h1>Marker Cluster</h1>
+  <hr />
+  <ng-map zoom="8" center="[40.74, -74.18]">
+    <custom-marker position="[{{p[0]}}, {{p[1]}}]" ng-repeat="p in vm.positions">
+      <div class="cm">
+        position:<br>
+        {{p[0]}}<br>
+        {{p[1]}}
+      </div>
+    </custom-marker>
+  </ng-map>
+</body>
+    
+    
+    
+    
+    
+    
+ 
+    
+    
+    
+    
+    
+    
+
+ </div>
