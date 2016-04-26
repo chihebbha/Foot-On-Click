@@ -1050,10 +1050,11 @@ console.log("ghc");
         });
         var talk = function(){
           var el = chats[i];
-          map.customMarkers.usa.setVisible(false);
-          map.customMarkers.can.setVisible(false);
+          map.customMarkers.usa.setVisible(true);
+          map.customMarkers.can.setVisible(true);
             map.customMarkers.tn.setVisible(true);
             map.customMarkers.fr.setVisible(true);
+            map.customMarkers.Mex.setVisible(true);
           map.customMarkers[el.className].setContent(el.innerHTML);
           map.customMarkers[el.className].setVisible(true);
           map.customMarkers[el.className].draw();
