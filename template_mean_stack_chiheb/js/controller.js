@@ -2,8 +2,14 @@
 
 .controller('BetInFicheParis',function($scope){
     
-
+var datetawa=new Date();
+         $scope.date0=new Date();
+          $scope.date1=datetawa.setDate(datetawa.getDate()+1);
+       
+      
+        
   
+        
     
      $scope.fiche=[];
 $scope.addBetInFiche=function(equipe1,equipe2,cote,equipeParis,rangBet){
@@ -49,13 +55,26 @@ console.log(a);
 
 .controller("GetAllBetItalia",function($scope,AllBet,$http,$timeout,$q,dataService){
   $scope.italianMatch=[];
+        $scope.italianMatch1=[];
+      
     $scope.spanishMatch=[];
+        $scope.spanishMatch1=[];
+
     $scope.championsLeague=[];
+        $scope.championsLeague1=[];
+ 
     $scope.portugalLigue=[];
+        $scope.portugalLigue1=[];
+
     $scope.premierLigue=[];
+        $scope.premierLigue1=[];
+
     $scope.frenshMatch=[];
+        $scope.frenshMatch1=[];
+
     $scope.deutchMatch=[];
-    $scope.NextspanishMatch=[];
+        $scope.deutchMatch1=[];
+
     $scope.others=[];
     $scope.teams=[];
     $scope.cotes=[];
@@ -116,7 +135,19 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
     
     
     
-    $http.get('http://api.football-data.org/v1/soccerseasons/401/fixtures').
+    $http.get('http://api.football-data.org/v1/soccerseasons/401/fixtures?timeFrame=n1').
+        success(function(data) {
+   
+      
+        for(var i=0;i<data.fixtures.length;i++)
+            { 
+ 
+            $scope.italianMatch.push(data.fixtures[i]);
+
+            }
+        });
+        
+          $http.get('http://api.football-data.org/v1/soccerseasons/401/fixtures?timeFrame=n2').
         success(function(data) {
         var dt=new Date();
        
@@ -126,8 +157,8 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
         for(var i=0;i<data.fixtures.length;i++)
             { var ddt=new Date(data.fixtures[i].date);
              var dd=ddt.toString().substring(0,15);
-            if(dtdt==dd){
-            $scope.italianMatch.push(data.fixtures[i]);
+            if(dtdt!=dd){
+            $scope.italianMatch1.push(data.fixtures[i]);
                 }
              
              
@@ -139,26 +170,58 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
     
     
     
-      $http.get('http://api.football-data.org/v1/soccerseasons/400/fixtures').
+      $http.get('http://api.football-data.org/v1/soccerseasons/400/fixtures?timeFrame=n1').
+        success(function(data) {
+
+        for(var i=0;i<data.fixtures.length;i++)
+            { 
+            $scope.spanishMatch.push(data.fixtures[i]);          
+            }
+        });
+        
+           $http.get('http://api.football-data.org/v1/soccerseasons/400/fixtures?timeFrame=n2').
         success(function(data) {
         var dt=new Date();
         var dtdt= dt.toString().substring(0,15);
-          
-          var dt1 = new Date();
-          dt1.setDate(dt1.getDate() + 2);
-          
-          
-             
-        var dtdt1= dt1.toString().substring(0,15);
       
         for(var i=0;i<data.fixtures.length;i++)
             { var ddt=new Date(data.fixtures[i].date);
              var dd=ddt.toString().substring(0,15);
-            if(dtdt==dd){
-            $scope.spanishMatch.push(data.fixtures[i]);
+            if(dtdt!=dd){
+            $scope.spanishMatch1.push(data.fixtures[i]);
                 }
-             if(dtdt1==dd)
-                 {$scope.NextspanishMatch.push(data.fixtures[i]);}
+           
+                       
+            }
+       
+
+        });
+        
+        
+    
+    
+     $http.get('http://api.football-data.org/v1/soccerseasons/394/fixturesfixtures?timeFrame=n1').
+        success(function(data) {
+      
+      
+        for(var i=0;i<data.fixtures.length;i++)
+            { 
+            $scope.deutchMatch.push(data.fixtures[i]);             
+            }
+       
+
+        });
+         $http.get('http://api.football-data.org/v1/soccerseasons/394/fixtures?timeFrame=n2').
+        success(function(data) {
+        var dt=new Date();
+        var dtdt= dt.toString().substring(0,15);
+      
+        for(var i=0;i<data.fixtures.length;i++)
+            { var ddt=new Date(data.fixtures[i].date);
+             var dd=ddt.toString().substring(0,15);
+            if(dtdt!=dd){
+            $scope.deutchMatch1.push(data.fixtures[i]);
+                }
                        
             }
        
@@ -166,41 +229,18 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
         });
     
     
-     $http.get('http://api.football-data.org/v1/soccerseasons/394/fixtures').
+      $http.get('http://api.football-data.org/v1/soccerseasons/396/fixtures?timeFrame=n1').
         success(function(data) {
-        var dt=new Date();
-        var dtdt= dt.toString().substring(0,15);
-      
-        for(var i=0;i<data.fixtures.length;i++)
-            { var ddt=new Date(data.fixtures[i].date);
-             var dd=ddt.toString().substring(0,15);
-            if(dtdt==dd){
-            $scope.deutchMatch.push(data.fixtures[i]);
-                }
-                       
-            }
-       
 
-        });
-    
-      $http.get('http://api.football-data.org/v1/soccerseasons/396/fixtures').
-        success(function(data) {
-        var dt=new Date();
-        var dtdt= dt.toString().substring(0,15);
-      
         for(var i=0;i<data.fixtures.length;i++)
-            { var ddt=new Date(data.fixtures[i].date);
-             var dd=ddt.toString().substring(0,15);
-            if(dtdt==dd){
+            { 
             $scope.frenshMatch.push(data.fixtures[i]);
-                }
-                       
+     
             }
        
 
         });
-    
-     $http.get('http://api.football-data.org/v1/soccerseasons/398/fixtures').
+           $http.get('http://api.football-data.org/v1/soccerseasons/396/fixtures?timeFrame=n2').
         success(function(data) {
         var dt=new Date();
         var dtdt= dt.toString().substring(0,15);
@@ -208,8 +248,38 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
         for(var i=0;i<data.fixtures.length;i++)
             { var ddt=new Date(data.fixtures[i].date);
              var dd=ddt.toString().substring(0,15);
-            if(dtdt==dd){
+            if(dtdt!=dd){
+            $scope.frenshMatch1.push(data.fixtures[i]);
+                }
+                       
+            }
+       
+
+        });
+    
+     $http.get('http://api.football-data.org/v1/soccerseasons/398/fixtures?timeFrame=n1').
+        success(function(data) {
+    
+        for(var i=0;i<data.fixtures.length;i++)
+            { 
+          
             $scope.premierLigue.push(data.fixtures[i]);
+    
+            }
+       
+
+        });
+        
+         $http.get('http://api.football-data.org/v1/soccerseasons/398/fixtures?timeFrame=n2').
+        success(function(data) {
+        var dt=new Date();
+        var dtdt= dt.toString().substring(0,15);
+      
+        for(var i=0;i<data.fixtures.length;i++)
+            { var ddt=new Date(data.fixtures[i].date);
+             var dd=ddt.toString().substring(0,15);
+            if(dtdt!=dd){
+            $scope.premierLigue1.push(data.fixtures[i]);
                 }
                        
             }
@@ -219,24 +289,45 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
     
 
     
-     $http.get('http://api.football-data.org/v1/soccerseasons/402/fixtures').
+     $http.get('http://api.football-data.org/v1/soccerseasons/402/fixtures?timeFrame=n1').
         success(function(data) {
-        var dt=new Date();
-        var dtdt= dt.toString().substring(0,15);
-      
+
         for(var i=0;i<data.fixtures.length;i++)
-            { var ddt=new Date(data.fixtures[i].date);
-             var dd=ddt.toString().substring(0,15);
-            if(dtdt==dd){
+            {
+
             $scope.portugalLigue.push(data.fixtures[i]);
+      
+            }
+        });
+          $http.get('http://api.football-data.org/v1/soccerseasons/402/fixtures?timeFrame=n2').
+        success(function(data) {
+        var dt=new Date();
+        var dtdt= dt.toString().substring(0,15);
+      
+        for(var i=0;i<data.fixtures.length;i++)
+            { var ddt=new Date(data.fixtures[i].date);
+             var dd=ddt.toString().substring(0,15);
+            if(dtdt!=dd){
+            $scope.portugalLigue1.push(data.fixtures[i]);
                 }
                        
             }
        
 
         });
+        
     
-      $http.get('http://api.football-data.org/v1/soccerseasons/405/fixtures').
+      $http.get('http://api.football-data.org/v1/soccerseasons/405/fixtures?timeFrame=n1').
+        success(function(data) {
+
+        for(var i=0;i<data.fixtures.length;i++)
+            { 
+
+            $scope.championsLeague.push(data.fixtures[i]);
+         
+            }
+        });
+            $http.get('http://api.football-data.org/v1/soccerseasons/405/fixtures?timeFrame=n2').
         success(function(data) {
         var dt=new Date();
         var dtdt= dt.toString().substring(0,15);
@@ -245,8 +336,8 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
         for(var i=0;i<data.fixtures.length;i++)
             { var ddt=new Date(data.fixtures[i].date);
              var dd=ddt.toString().substring(0,15);
-            if(dtdt==dd){
-            $scope.championsLeague.push(data.fixtures[i]);
+            if(dtdt!=dd){
+            $scope.championsLeague1.push(data.fixtures[i]);
                 }
                        
             }
