@@ -938,37 +938,7 @@ console.log("ghc");
          
          })
          
-       
-       // $http.post('http://localhost:3000/reservation').
-        //success(function(data) {
-//$scope.reserv=angular.fromJson(data);
-          
-       
-        
-//----- work cyrine rreservation -------////
-        
-       /* var config = {
-                headers : {
-                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
-                }
-            }
 
-            $http.get('http://localhost:3000/reservation',{"date_match": 1460481185540,
-    "position": 5 }, config)
-            .success(function (data, status, headers, config) {
-               $scope.reserv=angular.fromJson(data);
-            })
-            .error(function (data, status, header, config) {
-                $scope.ResponseDetails = "Data: " + data +
-                    "<hr />status: " + status +
-                    "<hr />headers: " + header +
-                    "<hr />config: " + config;
-            });
-        })
-*/
-    
-
-//----- work cyrine weather-------////
 
 .controller('weatherController', function($scope,$http) {
 
@@ -1116,9 +1086,25 @@ console.log("ghc");
 
 
     
-    
-    
-    
+    //--------------Raja Account-------
+
+        .controller('AccountUserController', function($scope,$http) {
+
+            $http.get('http://localhost:3000/bet/userB').
+            success(function(data) {
+
+
+                $scope.users=data;
+            });
+
+            //$scope.fbs=fb.query();
+
+        })
+
+
+
+        //---------end account-------
+
     
     
 
@@ -1135,6 +1121,8 @@ console.log("ghc");
            ;
 
         };
+
+
     })
     
         //end work raja
