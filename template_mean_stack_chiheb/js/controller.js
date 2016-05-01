@@ -41,7 +41,7 @@ if(rangBet==1)
         
           a = 'match'+i;
 str = a+' = '+i;
-eval(str);  
+eval(str);
 console.log(a);
         
     }
@@ -971,40 +971,11 @@ console.log("ghc");
             $scope.news=data;
         });
 
-        //$scope.fbs=fb.query();
+
 
     })
     
-//    angular.module('myApp.SendMail', ['ngRoute','ngResource'])
-//
-//.config(['$routeProvider', function($routeProvider) {
-//  $routeProvider.when('/SendMail', {
-//    templateUrl: 'mail/SendMail.html',
-//    controller: 'SendMailCtrl'
-//  });
-//}])
-//
-//
-//.controller('SendMailCtrl', function($scope, SendMailFactory) {
-//    
-//        $scope.SendMail=SendMailFactory.query();
-//	console.log($scope.SendMail);
-//
-//})
-//
-// 
-// .factory('SendMailFactory', function($resource){
-//        //Resource
-//        return $resource('http://localhost:3000/mail/send_mail',null, 
-//	{
-//            'query':  {method:'GET', isArray:true}
-//        });
-//
-//    })
-//
-//
-//
-//;
+
 
 
     //cyrine map1 //
@@ -1094,6 +1065,7 @@ console.log("ghc");
             success(function(data) {
 
 
+
                 $scope.users=data;
             });
 
@@ -1105,25 +1077,108 @@ console.log("ghc");
 
         //---------end account-------
 
-    
-    
+
+        //-----------Raja bet-----
+        /*
+
+        .controller('BetAfterMatch' , function ($scope , $http) {
+
+            $http.get('http://api.football-data.org/v1/fixtures?timeFrame=p1').
+                success(function(data){
+                $scope.idMatch=[];
+
+                for(var i=0;i<data.fixtures.length;i++)
+                {
+                    $scope.idMatch.push(data.fixtures[i].links.self.href);
+                }
+
+                    return idMatch ;
+                    });
+
+
+            $http.get('http://localhost:3000/bet/betF').
+                success(function(data){
+                $scope.MatchsId=[] ;
+                for(var i=0 ; i<data.length;i++)
+                {
+                    $scope.MatchsId.push(data[i].matchs.id);
+
+                }
+                return MatchsId;
+
+            });
+
+            $scope.CompaireResults=function(MatchsId ,idMatch )
+            {
+                for(var i=0;i<$scope.MatchsId.length;i++)
+                {
+                    if($scope.MatchsId[i].matchs.id==idMatch)
+
+
+                    {
+
+                         if(idMatch.fixtures.result.goalsHomeTeam > idMatch.fixtures.result.goalsAwayTeam)
 
 
 
 
 
 
-.controller('ReclamationCtrl', function($scope,$http) {
-   
-    $scope.recalmmer=function(c){
-        var aa={objet:"anobjet",message:"amessage"};
-        $http.post('http://localhost:3000/claim', aa)
-           ;
+                        $scope.Solde=function(solde)
+                        {
+                            $http.get('http://localhost:3000/bet/userB').
+                                success(function(data){
+                                for (var i=0;i<data.length;i++)
+                                {
+                                    $scope.solde.push(data[i].solde);
 
-        };
+                                }
 
 
-    })
+
+
+                            })
+                        }
+
+
+                    }
+                }
+
+            };
+
+
+
+
+
+
+        })
+
+
+
+*/
+
+        //-----------end bet------
+
+
+
+
+
+
+
+
+
+        .controller('ReclamationCtrl', function($scope, $http) {
+            $scope.recalmmer = function(c) {
+                var aa = {
+                    objet: "anobjet",
+                    message: "amessage"
+                };
+                $http.post('http://localhost:3000/claim', aa);
+            };
+            $http.get('http://localhost:3000/testtwilio').success(function(data, status) {
+                console.log(data);
+            });
+        })
     
         //end work raja
     
