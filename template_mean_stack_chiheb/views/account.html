@@ -1,0 +1,84 @@
+<div >
+<div ng-controller="AccountUserController">
+
+    <div ng-repeat="u in users">
+        <div class="content-section-b" >
+<table   ng-controller="BetInFicheParis">
+    <div ng-if="fr">
+    <h2 class="pad_bot1 pad_top1">Compte utilisateur</h2>
+
+    <h5 >Mr /Mme: {{u.name}}</h5>
+
+    <h5> Prénom : {{u.first_name}}</h5>
+
+   <h5> Nom :{{u.last_name}}</h5>
+
+     <h5> Sexe:{{u.gender}}</h5>
+
+    <h5>Lien Facebook:{{u.link}}</h5>
+
+     <h5> Langue :{{u.locale}} </h5>
+
+     <h5>Solde:    {{u.solde}}</h5>
+    </div>
+    <div ng-if="en">
+        <h2 class="pad_bot1 pad_top1">User account</h2>
+
+        <h5 >Mr /Mre: {{u.name}}</h5>
+
+        <h5> First name : {{u.first_name}}</h5>
+
+        <h5> Last name :{{u.last_name}}</h5>
+
+        <h5> gender:{{u.gender}}</h5>
+
+        <h5>Link Facebook:{{u.link}}</h5>
+
+        <h5> Language :{{u.locale}} </h5>
+
+        <h5>Balance:    {{u.solde}}</h5>
+    </div>
+    <div ng-if="ar">
+        <h2 class="pad_bot1 pad_top1">User account</h2>
+
+<h5>السيد/ السيدة :   {{u.name}} </h5>
+        <h5> الاسم : {{u.first_name}}</h5>
+
+        <h5> اللقب :{{u.last_name}}</h5>
+
+        <h5> جنس:{{u.gender}}</h5>
+
+        <h5>رابط الفيسبوك:{{u.link}}</h5>
+
+        <h5> اللغة :{{u.locale}} </h5>
+
+        <h5>الرصيد:    {{u.solde}}</h5>
+    </div>
+    <div ng-if="sp">
+        <h2 class="pad_bot1 pad_top1">User account</h2>
+
+        <h5 >señor /señora: {{u.name}}</h5>
+
+        <h5> nombre : {{u.first_name}}</h5>
+
+        <h5> apellido :{{u.last_name}}</h5>
+
+        <h5> género:{{u.gender}}</h5>
+
+        <h5>enlace Facebook:{{u.link}}</h5>
+
+        <h5> Idioma :{{u.locale}} </h5>
+
+        <h5>Saldar:    {{u.solde}}</h5>
+    </div>
+</table>
+            </div>
+
+
+        </div>
+
+
+
+
+</div>
+</div>

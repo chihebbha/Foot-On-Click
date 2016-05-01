@@ -48,8 +48,8 @@
      <script src="js/angular-fusioncharts.js"></script>    
             </head>
     <body ng-app="footApplication" >
-        
-<div class="body1" >
+        <div  ng-init="fr=true;en=false;ar=false;sp=false;">
+<div class="body1" ng-show="fr||ar">
   <div class="main">
     <!-- header -->
     <header>
@@ -64,25 +64,31 @@
             <li >
             <a href="#/Newsletter"><img style="width:35px" src="images/newsletter-icon.png"/></a>
             </li>
+            <a href="#/account"><img style="width:40px" src="images/account.png"/></a>
+            </li>
         </ul>
+
+
+
+
           
          
       </div>
       <nav>
         <ul id="menu" >
-          <li id="menu_active"><a href="#/">Home</a></li>
-          <li   ><a href="#/buying">Bet</a></li>
-          <li><a href="#/selling">Booking</a></li>
-          <li><a href="#/pastMatch">Past Match</a></li>
+          <li id="menu_active"><a href="#/">Accueil</a></li>
+          <li   ><a href="#/buying">Paris</a></li>
+          <li><a href="#/selling">Résevation</a></li>
+          <li><a href="#/pastMatch">Match</a></li>
             
            
-          <li><a href="#/reclamation">Claim</a></li>
+          <li><a href="#/reclamation">Réclamation</a></li>
             
 <!--            <li><a href="#/weather">weather</a></li>-->
             
             
             <li><a href="#/chat">Chat</a></li>
-            <li><a href="#/About">About</a></li> 
+            <li><a href="#/About">A propos</a></li>
 
         </ul>
       </nav>
@@ -90,7 +96,177 @@
     <!-- / header -->
   </div>
 </div>
-        <div class="body2" ng-controller="BetInFicheParis" style="padding-left:180px">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="body1" ng-show="en">
+                <div class="main">
+                    <!-- header -->
+                    <header>
+                        <h1><a href="index.html" id="logo"></a></h1>
+                        <div class="wrapper">
+                            <ul id="icons">
+
+
+                                <li>
+                                    <a href="#/statistic"><img src="images/statistique.png"/></a>
+                                </li>
+                                <li >
+                                    <a href="#/Newsletter"><img style="width:35px" src="images/newsletter-icon.png"/></a>
+                                </li>
+                                <a href="#/account"><img style="width:40px" src="images/account.png"/></a>
+                                </li>
+                            </ul>
+
+
+
+
+
+
+                        </div>
+                        <nav>
+                            <ul id="menu" >
+                                <li id="menu_active" ><a href="#/">Home</a></li>
+                                <li   ><a href="#/buying">Bet</a></li>
+                                <li><a href="#/selling">Booking</a></li>
+                                <li><a href="#/pastMatch">Past Match</a></li>
+
+
+                                <li><a href="#/reclamation">Claim</a></li>
+
+                                <!--            <li><a href="#/weather">weather</a></li>-->
+
+
+                                <li><a href="#/chat">Chat</a></li>
+                                <li><a href="#/About">About</a></li>
+
+
+
+                            </ul>
+                        </nav>
+                    </header>
+                    <!-- / header -->
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="body1" ng-show="sp">
+                <div class="main">
+                    <!-- header -->
+                    <header>
+                        <h1><a href="index.html" id="logo"></a></h1>
+                        <div class="wrapper">
+                            <ul id="icons">
+
+
+                                <li>
+                                    <a href="#/statistic"><img src="images/statistique.png"/></a>
+                                </li>
+                                <li >
+                                    <a href="#/Newsletter"><img style="width:35px" src="images/newsletter-icon.png"/></a>
+                                </li>
+                                <a href="#/account"><img style="width:40px" src="images/account.png"/></a>
+                                </li>
+                            </ul>
+
+
+
+
+
+
+                        </div>
+                        <nav>
+                            <ul id="menu" >
+                                <li id="menu_active" ><a href="#/">Casa</a></li>
+                                <li   ><a href="#/buying">Apuesta</a></li>
+                                <li><a href="#/selling">Reserva</a></li>
+                                <li><a href="#/pastMatch">Partidos</a></li>
+
+
+                                <li><a href="#/reclamation">Reclamar</a></li>
+
+                                <!--            <li><a href="#/weather">weather</a></li>-->
+
+
+                                <li><a href="#/chat">Charla</a></li>
+                                <li><a href="#/About">Acerca</a></li>
+
+
+
+                            </ul>
+                        </nav>
+                    </header>
+                    <!-- / header -->
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="body2"  style="padding-left:180px">
             <section id="content">
       <div class="wrapper">
         <article class="col1">
@@ -103,6 +279,7 @@
              </article>
        <article class="col2" ng-init="coteTotal=1" >
             <h2> <a href="#/classement"><span  class="label label-danger">Stading</span></a></h2>
+           <img src="images/drapeauFr.jpg" ng-click="fr=true;en=false;ar=false;sp=false;"/><img src="images/drapeau%20united%20kingdom.png" ng-click="fr=false;en=true;ar=false;sp=false;" style="padding-left: 10px"/><img src="images/arabfag.jpg" ng-click="fr=false;en=false;ar=true;sp=false;" style="padding-left: 10px"/><img src="images/flag_spain_02.jpg" ng-click="fr=false;en=false;ar=false;sp=true;" style="padding-left: 10px"/>
           <form id="form_1" action="#" method="post">
             
               <h3 style="text-align:center">Bet Slip</h3>
@@ -159,27 +336,47 @@
                 </div>
                
                  </div>
-             
-          
-            
+
+
+
+
+<ul>
+
+
+    <li>
+
+        <video controls poster="images/jawhara-fm.jpg">
+            <source src="http://streaming2.toutech.net:8000/jawharafm">
+            Radio Jawhra </source>
+        </video>
+    </li>
+
+
+</ul>
+
+
+
+
         </article>
       </div>
-      
-                
+
+
+
+
     </section>
             
          
     </div>
 
         </div>
-        
+
+
+        </div>
            <footer> Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved<br>
       Design by TWINR'S
       <!-- {%FOOTER_LINK} -->
-          <video controls poster="images/jawhra-fm.jpg" style="padding-left:350px;">
-                        <source src="http://streaming2.toutech.net:8000/jawharafm">
-                        Radio Jawhra </source>
-                    </video>
+
+
 
         
             

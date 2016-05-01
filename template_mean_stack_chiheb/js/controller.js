@@ -1,7 +1,7 @@
     angular.module('footApplication.controllers', ['ngMap','ngRoute','ngResource'])
 
 .controller('BetInFicheParis',function($scope){
-    
+
 var datetawa=new Date();
          $scope.date0=new Date();
           $scope.date1=datetawa.setDate(datetawa.getDate()+1);
@@ -41,7 +41,7 @@ if(rangBet==1)
         
           a = 'match'+i;
 str = a+' = '+i;
-eval(str);  
+eval(str);
 console.log(a);
         
     }
@@ -1067,37 +1067,7 @@ console.log("ghc");
          
          })
          
-       
-       // $http.post('http://localhost:3000/reservation').
-        //success(function(data) {
-//$scope.reserv=angular.fromJson(data);
-          
-       
-        
-//----- work cyrine rreservation -------////
-        
-       /* var config = {
-                headers : {
-                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
-                }
-            }
 
-            $http.get('http://localhost:3000/reservation',{"date_match": 1460481185540,
-    "position": 5 }, config)
-            .success(function (data, status, headers, config) {
-               $scope.reserv=angular.fromJson(data);
-            })
-            .error(function (data, status, header, config) {
-                $scope.ResponseDetails = "Data: " + data +
-                    "<hr />status: " + status +
-                    "<hr />headers: " + header +
-                    "<hr />config: " + config;
-            });
-        })
-*/
-    
-
-//----- work cyrine weather-------////
 
 .controller('weatherController', function($scope,$http) {
 
@@ -1165,6 +1135,7 @@ console.log("ghc");
             'query':  {method:'GET', isArray:true}
         });
 
+
     })
 
 
@@ -1172,36 +1143,7 @@ console.log("ghc");
 
     ////
     
-//    angular.module('myApp.SendMail', ['ngRoute','ngResource'])
-//
-//.config(['$routeProvider', function($routeProvider) {
-//  $routeProvider.when('/SendMail', {
-//    templateUrl: 'mail/SendMail.html',
-//    controller: 'SendMailCtrl'
-//  });
-//}])
-//
-//
-//.controller('SendMailCtrl', function($scope, SendMailFactory) {
-//    
-//        $scope.SendMail=SendMailFactory.query();
-//	console.log($scope.SendMail);
-//
-//})
-//
-// 
-// .factory('SendMailFactory', function($resource){
-//        //Resource
-//        return $resource('http://localhost:3000/mail/send_mail',null, 
-//	{
-//            'query':  {method:'GET', isArray:true}
-//        });
-//
-//    })
-//
-//
-//
-//;
+
 
 
     //cyrine map1 //
@@ -1326,17 +1268,145 @@ console.log("ghc");
 
 
 
-
-.controller('ReclamationCtrl', function($scope,$http) {
-   
-    $scope.recalmmer=function(c){
-        var aa={objet:"anobjet",message:"amessage"};
-        $http.post('http://localhost:3000/claim', aa)
-           ;
-
-        };
-    })
     
+    //--------------Raja Account-------
+
+        .controller('AccountUserController', function($scope,$http) {
+
+            $scope.users=[];
+            $http.get('http://localhost:3000/bet/userB').
+            success(function(data) {
+
+
+
+                $scope.users=data;
+            });
+
+            //$scope.fbs=fb.query();
+
+        })
+
+
+
+        //---------end account-------
+
+
+        //-----------Raja bet-----
+
+
+        .controller('BetAfterMatch' , function ($scope , $http) {
+            $scope.MatchsId=[] ;
+            $scope.idMatch=[];
+            $http.get('http://api.football-data.org/v1/fixtures?timeFrame=p1').
+                success(function(data){
+
+
+                for(var i=0;i<data.fixtures.length;i++)
+                {
+                    $scope.idMatch.push(data.fixtures[i].links.self.href);
+                }
+
+                    console.log(idMatch)  ;
+                    });
+
+
+            $http.get('http://localhost:3000/bet/betF').
+                success(function(data){
+
+
+
+                    for(var i=0 ; i<data[0].matchs.length;i++) {
+
+                        $scope.MatchsId.push(data[0].matchs[i].id);
+                    }
+
+
+                console.log(MatchsId);
+
+            });
+
+            $scope.CompaireResults=function(MatchsId ,idMatch  )
+
+
+
+            {
+
+                $scope.users=[];
+
+                for(var i=0;i<idMatch.fixtures[i].links.self.href.length;i++)
+                {
+                    if($scope.idMatch[i].matchs.id==MatchsId) {
+                        for (var i = 0; i < idMatch.fixtures[i].result.length; i++)
+
+                        {
+                         if(idMatch.fixtures[i].result.goalsHomeTeam > idMatch.fixtures[i].result.goalsAwayTeam)
+
+                         {
+
+                             $scope.Solde=function(solde)
+                             {
+                                 $http.get('http://localhost:3000/bet/userB').
+                                 success(function(data){
+
+
+                                         $scope.solde.push(data[i].solde);
+
+
+
+
+
+
+
+
+
+
+
+                                 })
+                             }
+
+
+                         }
+
+
+                    }
+                    }
+                }
+
+            };
+
+
+
+
+
+
+        })
+
+
+
+
+        //-----------end bet------
+
+
+
+
+
+
+
+
+
+        .controller('ReclamationCtrl', function($scope, $http) {
+            $scope.recalmmer = function(c) {
+                var aa = {
+                    objet: "anobjet",
+                    message: "amessage"
+                };
+                $http.post('http://localhost:3000/claim', aa);
+            };
+            $http.get('http://localhost:3000/testtwilio').success(function(data, status) {
+                console.log(data);
+            });
+        })
+
         //end work raja
     
    ;

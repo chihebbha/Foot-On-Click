@@ -12,6 +12,8 @@ var FB = require('fb');
 
 var FBroute = require('./routes/fb');
 
+var Betroute = require('./routes/betF');
+
 var chat = require('./routes/chat');
 
 var client = require('twilio')('AC03d7e8686873ebfaeb3ac18152907fdb', '1d208037b2e7e1f9b904509a64c4c34f');
@@ -27,6 +29,8 @@ var users = require('./routes/users');
 var weather = require('./routes/weather');
 var reservation = require('./routes/reservation');
 var newslleter = require('./routes/newslleter');
+
+//cyrine
 
 var http = require('http') ;
 var twig = require('twig') ;
@@ -91,6 +95,8 @@ app.use('/reservation', reservation);
 app.use('/newslleter', newslleter);
 
 //cyrine
+
+
 app.use('/frenshMatch', frenshMatch);
 app.use('/deutshMatch', deutshMatch);
 app.use('/englishMatch', englishMatch);
@@ -102,6 +108,7 @@ app.use('/spanishMatch', spanishMatch);
 
 
 //raja
+app.use('/bet', Betroute),
 app.use('/chat', chat);
 app.use('/claim',require('./routes/claim'));
 app.use('/fb',FBroute);
@@ -109,20 +116,22 @@ app.use('/fb',FBroute);
 // raja sms
 
 
-app.get('/testtwilio', function (req, res) {
+app.get('/testtwilio', function(req, res) {
     client.sendMessage({
         to: '+21626722919',
         from: '+14439917726',
-        body: 'partie 14h.'
-    }, function (err, data) {
-        if (err)
-
+        body: 'réclamation reçue'
+    }, function(err, data) {
+        if (err){
             console.log(err);
-        console.log(data);
+        }else{
+            console.log(data);
+            res.json(data);
+        }
+
 
     });
 });
-
 
 
 //end raja sms
