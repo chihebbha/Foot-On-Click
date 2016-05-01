@@ -4,12 +4,12 @@ var request=require('request');
 
 var mLab = require('mongolab-data-api')('uvxRwGeN6nKy9oQt5hg7yKYLltgGAbyN');
 
-router.get('/',function(req, res, next){
+router.get('/claim',function(req, res, next){
 
     mLab.insertDocuments({
         database: 'footonclick',
         collectionName: 'reclamation',
-       documents: {objet:"sqd"}
+       documents: {objet:""}
     },function(req,res){
         console.log("ajput reclammation avec succee ");
 
@@ -18,4 +18,6 @@ router.get('/',function(req, res, next){
 
 
 });
+
+
 module.exports = router;
