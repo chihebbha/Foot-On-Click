@@ -200,7 +200,7 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
         
     
     
-     $http.get('http://api.football-data.org/v1/soccerseasons/394/fixturesfixtures?timeFrame=n1').
+     $http.get('http://api.football-data.org/v1/soccerseasons/394/fixtures?timeFrame=n1').
         success(function(data) {
       
       
