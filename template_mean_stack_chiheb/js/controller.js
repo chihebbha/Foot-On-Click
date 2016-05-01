@@ -779,7 +779,7 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-               $http.get('http://localhost:3000/reservation/AttaqueDroite22').
+               $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });     
@@ -805,7 +805,7 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                $http.get('http://localhost:3000/reservation/Defance1').
+                $http.get('http://localhost:3000/reservation/Defance1/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });
@@ -835,7 +835,7 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                 $http.get('http://localhost:3000/reservation/gardien2').
+                 $http.get('http://localhost:3000/reservation/gardien2/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });
@@ -860,7 +860,7 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                  $http.get('http://localhost:3000/reservation/Defance2').
+                  $http.get('http://localhost:3000/reservation/Defance2/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });
@@ -886,7 +886,7 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                   $http.get('http://localhost:3000/reservation/AttaqueDroite11').
+                   $http.get('http://localhost:3000/reservation/AttaqueDroite11/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });    
@@ -913,7 +913,7 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                  $http.get('http://localhost:3000/reservation/AttaqueDroite12s').
+                  $http.get('http://localhost:3000/reservation/AttaqueDroite12s/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         }); 
@@ -942,7 +942,7 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                   $http.get('http://localhost:3000/reservation/Defance2').
+                   $http.get('http://localhost:3000/reservation/Defance2/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });   
@@ -967,7 +967,7 @@ console.log("ghc");
             $scope.reservation12= false ;
             $scope.reservation1= false ;
             $scope.reservation13= false ;
-                    $http.get('http://localhost:3000/reservation/Defance3').
+                    $http.get('http://localhost:3000/reservation/Defance3/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });  
@@ -991,7 +991,7 @@ console.log("ghc");
             $scope.reservation1= false ;
              $scope.reservation8= false ;
             $scope.reservation13= false ;
-                     $http.get('http://localhost:3000/reservation/Defance4').
+                     $http.get('http://localhost:3000/reservation/Defance4/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });
@@ -1017,7 +1017,7 @@ console.log("ghc");
             $scope.reservation12= false ;
             $scope.reservation1= false ;
              $scope.reservation8= false ;
-                      $http.get('http://localhost:3000/reservation/Defance5').
+                      $http.get('http://localhost:3000/reservation/Defance5/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         }); 
@@ -1042,7 +1042,7 @@ console.log("ghc");
             
              $scope.reservation8= false ;
               
-             $http.get('http://localhost:3000/reservation/gardien2').
+             $http.get('http://localhost:3000/reservation/gardien2/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });   
