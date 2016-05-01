@@ -54,6 +54,9 @@ angular.module('footApplication', ['ngRoute','footApplication.controllers','foot
     .when('/About', {
         templateUrl: 'views/map2.html'
       })
+    .when('/Calender', {
+        templateUrl: 'views/Calender3.html'
+      })
      .when('/statistic', {
         templateUrl: 'views/statistics.html'
        

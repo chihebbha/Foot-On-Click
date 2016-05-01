@@ -9,6 +9,7 @@ mark, rp, rt, ruby, summary, time {
 .left {
 	float:left
 }
+
 .right {
 	float:right
 }
@@ -200,6 +201,18 @@ no-repeat;
 	height:376px;
 	z-index:88;
 	overflow:hidden
+}
+#content1 input {
+    margin-left: 53px;
+    border-radius: 5px;
+
+}
+#content1 select {
+       border-radius: 11px;
+    height: 22px;
+    
+    margin-top: 5px;
+
 }
 /* If an image is wrapped in a link */
 .nivoSlider a.nivo-imageLink {
@@ -704,4 +717,7 @@ color:red;
 
 
 /*END css chiheb*/
+
+
+
 

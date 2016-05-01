@@ -1,0 +1,42 @@
+
+    
+    
+        
+
+    <!-- Git Repo: https://github.com/Russian60/flex-calendar -->
+  
+  <div ng-controller="MainController">
+    <h1> 
+      <span class="l"></span><span class="r"></span>
+    </h1>
+    <p></p>
+    <div class="wrapp" >
+      <flex-calendar options="options" events="events"></flex-calendar>
+    </div>
+    <br />
+    
+     
+      
+       <div class="row responsive-sm" ng-repeat ="item in items ">
+                
+                   <div align="center">
+                 <th>
+ <p> <font  align="right" > <i align="center">
+                
+date de départ est  {{item.dateDepart_Planning | date:'yyyy-MM-dd'}} 
+                 <br>
+ date d'arrivée est {{item.dateArrivee_Planning | date:'yyyy-MM-dd'}} 
+                 <br>
+                 
+   dérigé vers    {{item.itinerary.arret_Itinerary }} 
+                 <br>
+         a travers  {{item.vehicle.type_Bus }} 
+                 
+     </th>
+     </div>    
+  </div>
+</div>
+    
+
+    
+    

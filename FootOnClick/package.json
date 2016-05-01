@@ -18,6 +18,7 @@
     "mongolab-data-api": "^1.1.4",
     "mongoose": "^4.4.6",
     "morgan": "~1.6.1",
+    "nodemailer": "^0.7.1",
     "querystring": "^0.2.0",
     "request": "^2.69.0",
     "serve-favicon": "~2.3.0",

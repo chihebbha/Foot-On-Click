@@ -1,4 +1,4 @@
-    angular.module('footApplication.controllers', ['ngMap'])
+    angular.module('footApplication.controllers', ['ngMap','ngRoute','ngResource'])
 
 .controller('BetInFicheParis',function($scope){
     
@@ -738,14 +738,22 @@ $http.get('http://api.football-data.org/v1/soccerseasons/394/fixtures?timeFrame=
 console.log("ghc");
         
         
-        
-        
-        
-        
         $scope.reserver1 = function ()
         {
             $scope.reservation1= true ;
-             $http.get('http://localhost:3000/reservation/AttaqueDroite12').
+            $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation4= false ;
+            $scope.reservation5= false ;
+            $scope.reservation6= false ;
+            $scope.reservation8= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation13= false ;
+            
+             $http.get('http://localhost:3000/reservation/AttaqueDroite12/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });   
@@ -760,7 +768,17 @@ console.log("ghc");
          $scope.reserver2 = function ()
         {
             $scope.reservation2= true ;
-             // $scope.reservation3= false ;
+            $scope.reservation1= false;
+            $scope.reservation3= false ;
+            $scope.reservation4= false ;
+            $scope.reservation5= false ;
+            $scope.reservation6= false ;
+            $scope.reservation8= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation13= false ;
                $http.get('http://localhost:3000/reservation/AttaqueDroite22').
         success(function(data) {
             $scope.weath=data;
@@ -776,6 +794,17 @@ console.log("ghc");
           $scope.reserver3 = function ()
         {
             $scope.reservation3= true ;
+            $scope.reservation1= false;
+            $scope.reservation2= false ;
+            $scope.reservation4= false ;
+            $scope.reservation5= false ;
+            $scope.reservation6= false ;
+            $scope.reservation8= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation13= false ;
                 $http.get('http://localhost:3000/reservation/Defance1').
         success(function(data) {
             $scope.weath=data;
@@ -795,6 +824,17 @@ console.log("ghc");
            $scope.reserver4 = function ()
         {
             $scope.reservation4= true ;
+            $scope.reservation1= false;
+            $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation5= false ;
+            $scope.reservation6= false ;
+            $scope.reservation8= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation13= false ;
                  $http.get('http://localhost:3000/reservation/gardien2').
         success(function(data) {
             $scope.weath=data;
@@ -809,6 +849,17 @@ console.log("ghc");
             $scope.reserver5 = function ()
         {
             $scope.reservation5= true ;
+            $scope.reservation1= false;
+            $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation4= false ;
+            $scope.reservation6= false ;
+            $scope.reservation8= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation13= false ;
                   $http.get('http://localhost:3000/reservation/Defance2').
         success(function(data) {
             $scope.weath=data;
@@ -824,6 +875,17 @@ console.log("ghc");
              $scope.reserver6 = function ()
         {
             $scope.reservation6= true ;
+            $scope.reservation1= false;
+            $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation5= false ;
+            $scope.reservation4= false ;
+            $scope.reservation8= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation13= false ;
                    $http.get('http://localhost:3000/reservation/AttaqueDroite11').
         success(function(data) {
             $scope.weath=data;
@@ -840,6 +902,17 @@ console.log("ghc");
               $scope.reserver8 = function ()
         {
             $scope.reservation8= true ;  
+             $scope.reservation1= false;
+            $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation4= false ;
+            $scope.reservation6= false ;
+            $scope.reservation5= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation13= false ;
                   $http.get('http://localhost:3000/reservation/AttaqueDroite12s').
         success(function(data) {
             $scope.weath=data;
@@ -857,7 +930,18 @@ console.log("ghc");
               
                $scope.reserver9 = function ()
         {
-            $scope.reservation9= true ; 
+            $scope.reservation9= true ;
+            $scope.reservation1= false ;
+           $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation4= false ;
+            $scope.reservation6= false ;
+            $scope.reservation5= false ;
+            $scope.reservation8= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation13= false ;
                    $http.get('http://localhost:3000/reservation/Defance2').
         success(function(data) {
             $scope.weath=data;
@@ -871,7 +955,18 @@ console.log("ghc");
                
                 $scope.reserver10 = function ()
         {
-            $scope.reservation10= true ;  
+            $scope.reservation10= true ; 
+            $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation4= false ;
+            $scope.reservation6= false ;
+            $scope.reservation5= false ;
+            $scope.reservation9= false ;
+            $scope.reservation8= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation1= false ;
+            $scope.reservation13= false ;
                     $http.get('http://localhost:3000/reservation/Defance3').
         success(function(data) {
             $scope.weath=data;
@@ -885,6 +980,17 @@ console.log("ghc");
                  $scope.reserver12 = function ()
         {
             $scope.reservation12= true ; 
+             $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation4= false ;
+            $scope.reservation6= false ;
+            $scope.reservation5= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation1= false ;
+             $scope.reservation8= false ;
+            $scope.reservation13= false ;
                      $http.get('http://localhost:3000/reservation/Defance4').
         success(function(data) {
             $scope.weath=data;
@@ -900,6 +1006,17 @@ console.log("ghc");
                   $scope.reserver13 = function ()
         {
             $scope.reservation13= true ;  
+            $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation4= false ;
+            $scope.reservation6= false ;
+            $scope.reservation5= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation11= false ;
+            $scope.reservation12= false ;
+            $scope.reservation1= false ;
+             $scope.reservation8= false ;
                       $http.get('http://localhost:3000/reservation/Defance5').
         success(function(data) {
             $scope.weath=data;
@@ -912,7 +1029,19 @@ console.log("ghc");
                   
          $scope.reserver11 = function ()
         {
-            $scope.reservation11= true ;  
+            $scope.reservation11= true ;
+             $scope.reservation1= false ;
+             $scope.reservation2= false ;
+            $scope.reservation3= false ;
+            $scope.reservation4= false ;
+            $scope.reservation6= false ;
+            $scope.reservation5= false ;
+            $scope.reservation9= false ;
+            $scope.reservation10= false ;
+            $scope.reservation12= false ;
+            
+             $scope.reservation8= false ;
+              
              $http.get('http://localhost:3000/reservation/gardien2').
         success(function(data) {
             $scope.weath=data;
@@ -992,18 +1121,56 @@ console.log("ghc");
     
 //----- work cyrine neslterr-------////
 
-.controller('NewsletterController', function($scope,$http) {
+//.controller('NewsletterController', function($scope,$http) {
+//
+//        $http.get('http://localhost:3000/newslleter').
+//        success(function(data) {
+//
+//
+//            $scope.news=data;
+//        });
+//
+//        //$scope.fbs=fb.query();
+//
+//    })
+    
+    
+    
+    
+    
+    //////
+    
+   
 
-        $http.get('http://localhost:3000/newslleter').
-        success(function(data) {
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/Newsletter', {
+    templateUrl: 'Newsletter.html',
+    controller: 'SendMailCtrl'
+  });
+}])
 
 
-            $scope.news=data;
+.controller('SendMailCtrl', function($scope, SendMailFactory) {
+    
+        $scope.SendMail=SendMailFactory.query();
+	console.log($scope.SendMail);
+
+})
+
+ 
+ .factory('SendMailFactory', function($resource){
+        //Resource
+        return $resource('http://localhost:3000/newslleter/send_mail',null, 
+	{
+            'query':  {method:'GET', isArray:true}
         });
 
-        //$scope.fbs=fb.query();
-
     })
+
+
+
+
+    ////
     
 //    angular.module('myApp.SendMail', ['ngRoute','ngResource'])
 //
@@ -1096,8 +1263,51 @@ console.log("ghc");
     
     
     
+    ///////calender ////
     
     
+//  .controller("calendarDemo", function($scope) {
+//  $scope.day = moment();
+//})
+//    
+   
+    ////calender  ////////
+//    .controller('MainController', function($scope,$http) {
+//    $scope.options = {
+//    defaultDate: "2016-01-01",
+//    minDate: "2015-01-01",
+//    maxDate: "2017-12-31",
+//    disabledDates: [
+//        "2015-06-22",
+//        "2015-07-27",
+//        "2015-08-13",
+//        "2015-08-15"
+//    ],
+//    dayNamesLength: 1, // 1 for "M", 2 for "Mo", 3 for "Mon"; 9 will show full day names. Default is 1.
+//    mondayIsFirstDay: true,//set monday as first day of week. Default is false
+//    eventClick: function(date) {
+//        
+//    },
+//    dateClick: function(date) {
+//     
+////         var url=  $http.get("http://localhost:18080/pitwin-web/rest/plannings/date/"+date.day+"/"+date._month+"/"+date.year).success(function(response)
+//    {
+//             console.log(response);
+//             $scope.items = response;
+//        });  
+//    },
+//    changeMonth: function(month, year) {
+//      console.log(month, year);
+//    },
+//  };
+
+//  $scope.events = [
+//    {foo: 'bar', date: "2015-08-18"},
+//    {foo: 'bar', date: "2015-08-20"}
+//  ];
+//})
+    
+ 
     
     //----- work raja Actuality-------////
 
@@ -1113,16 +1323,6 @@ console.log("ghc");
         //$scope.fbs=fb.query();
 
     })
-
-
-    
-    
-    
-    
-    
-    
-
-
 
 
 

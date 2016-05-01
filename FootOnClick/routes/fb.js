@@ -13,7 +13,7 @@ var FB = require('fb');
 
 
 router.get("/data" , function (req, res) {
-    FB.setAccessToken('CAACEdEose0cBABdrmbidgR41pLRaSGRZAmMe2CIZAO6iaZBffCuZAo2u1fpBbpXf5XjLDZA8sDXpqNd46kW3Ga0CqfTsSdxyUdLJVzfTNYRkuUDz1KzQeq7DwZCDsIu9mcz47oZBK9lTNwFHb45beg3lGL8ZB0ztl5H3vSZBYsiQWJi6nCZB4TVeUvedSVCZBBHyaZAA4iZA8A5JXQUYWC8cQvxxZA3Bzm0NSTK9UZD');
+    FB.setAccessToken('CAACEdEose0cBAFCPkuyQkC2ZCcSfjPYjfjtdrHdJmelrtimZC1MnWU483ZAnhY69v2LFzNZBM8av5NoXsuLoYgCSkr3gC1fQvVukNvYEPVHgRZCY0lHiLaOGyM2pBPuyL5GGczqHhqovGfzOxPPweMhZALTm1ixyZCoefatYfw0LrmfORrpSBJ8oPo7qarlAjO7TiFpDpHjMv9KQDsVCYW36TJWOqsRfSAZD');
     var rs = [];
     FB.api('/Cristiano?fields=posts{full_picture,comments,message}', function (result) {
         if (!result || result.error) {
