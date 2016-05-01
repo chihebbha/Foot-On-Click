@@ -368,7 +368,7 @@ var cote1=1+(1+dataResponse.data.head2head.awayTeamWins)/(1+dataResponse.data.he
     };
     
     
-       $http.get('http://localhost:3000/teams').success(function(data) {
+       $http.get('https://foot-on-click.herokuapp.com/teams').success(function(data) {
         
      
         for(var i=0;i<data.length;i++)
@@ -720,7 +720,7 @@ $http.get('http://api.football-data.org/v1/soccerseasons/394/fixtures?timeFrame=
     
 .controller('instagramController', function($scope,$http) {
 
-        $http.get('http://localhost:3000/users/tag_media').
+        $http.get('https://foot-on-click.herokuapp.com/users/tag_media').
         success(function(data) {
 
 
@@ -753,15 +753,15 @@ console.log("ghc");
             $scope.reservation12= false ;
             $scope.reservation13= false ;
             
-             $http.get('http://localhost:3000/reservation/AttaqueDroite12/'+$scope.date+'/'+$scope.partie).
+             $http.get('https://foot-on-click.herokuapp.com/reservation/AttaqueDroite12/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });  
-            $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+            $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
             
-                     $http.get('http://localhost:3000/reservation/user').
+                     $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -782,14 +782,14 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-               $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$scope.partie).
+               $http.get('https://foot-on-click.herokuapp.com/reservation/AttaqueDroite22/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });     
-             $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+             $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
-                $http.get('http://localhost:3000/reservation/user').
+                $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -811,14 +811,14 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                $http.get('http://localhost:3000/reservation/Defance1/'+$scope.date+'/'+$scope.partie).
+                $http.get('https://foot-on-click.herokuapp.com/reservation/Defance1/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });
-              $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+              $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
-                 $http.get('http://localhost:3000/reservation/user').
+                 $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -844,14 +844,14 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                 $http.get('http://localhost:3000/reservation/gardien2/'+$scope.date+'/'+$scope.partie).
+                 $http.get('https://foot-on-click.herokuapp.com/reservation/gardien2/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });
-               $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+               $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
-                  $http.get('http://localhost:3000/reservation/user').
+                  $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -872,14 +872,14 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                  $http.get('http://localhost:3000/reservation/Defance2/'+$scope.date+'/'+$scope.partie).
+                  $http.get('https://foot-on-click.herokuapp.com/reservation/Defance2/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });
-                $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
-                   $http.get('http://localhost:3000/reservation/user').
+                   $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -901,15 +901,15 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                   $http.get('http://localhost:3000/reservation/AttaqueDroite11/'+$scope.date+'/'+$scope.partie).
+                   $http.get('https://foot-on-click.herokuapp.com/reservation/AttaqueDroite11/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });    
-                 $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                 $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
                  
-                   $http.get('http://localhost:3000/reservation/user').
+                   $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         });      
@@ -931,15 +931,15 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                  $http.get('http://localhost:3000/reservation/AttaqueDroite12s/'+$scope.date+'/'+$scope.partie).
+                  $http.get('https://foot-on-click.herokuapp.com/reservation/AttaqueDroite12s/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         }); 
-                  $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                  $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
                   
-                     $http.get('http://localhost:3000/reservation/user').
+                     $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -963,14 +963,14 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= false ;
-                   $http.get('http://localhost:3000/reservation/Defance2/'+$scope.date+'/'+$scope.partie).
+                   $http.get('https://foot-on-click.herokuapp.com/reservation/Defance2/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });   
-                   $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                   $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
-                      $http.get('http://localhost:3000/reservation/user').
+                      $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -991,14 +991,14 @@ console.log("ghc");
             $scope.reservation12= false ;
             $scope.reservation1= false ;
             $scope.reservation13= false ;
-                    $http.get('http://localhost:3000/reservation/Defance3/'+$scope.date+'/'+$scope.partie).
+                    $http.get('https://foot-on-click.herokuapp.com/reservation/Defance3/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });  
-                    $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                    $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
-                       $http.get('http://localhost:3000/reservation/user').
+                       $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -1018,14 +1018,14 @@ console.log("ghc");
             $scope.reservation1= false ;
              $scope.reservation8= false ;
             $scope.reservation13= false ;
-                     $http.get('http://localhost:3000/reservation/Defance4/'+$scope.date+'/'+$scope.partie).
+                     $http.get('https://foot-on-click.herokuapp.com/reservation/Defance4/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });
-                     $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                     $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
-                        $http.get('http://localhost:3000/reservation/user').
+                        $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -1046,14 +1046,14 @@ console.log("ghc");
             $scope.reservation12= false ;
             $scope.reservation1= false ;
              $scope.reservation8= false ;
-                      $http.get('http://localhost:3000/reservation/Defance5/'+$scope.date+'/'+$scope.partie).
+                      $http.get('https://foot-on-click.herokuapp.com/reservation/Defance5/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         }); 
-                      $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                      $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
-                         $http.get('http://localhost:3000/reservation/user').
+                         $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -1074,15 +1074,15 @@ console.log("ghc");
             
              $scope.reservation8= false ;
               
-             $http.get('http://localhost:3000/reservation/gardien2/'+$scope.date+'/'+$scope.partie).
+             $http.get('https://foot-on-click.herokuapp.com/reservation/gardien2/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
         });   
-             $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+             $http.get('https://foot-on-click.herokuapp.com/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
              
-                $http.get('http://localhost:3000/reservation/user').
+                $http.get('https://foot-on-click.herokuapp.com/reservation/user').
         success(function(data) {
             $scope.users=data;
         }); 
@@ -1092,7 +1092,7 @@ console.log("ghc");
          $scope.inviter = function (id)
          {
          
-                 $http.get('http://localhost:3000/reservation/inviter/'+id).
+                 $http.get('https://foot-on-click.herokuapp.com/reservation/inviter/'+id).
         success(function(data) {
             alert ("succ"); 
         });  
@@ -1109,7 +1109,7 @@ console.log("ghc");
         
         
         
-        $http.get('http://localhost:3000/weather').
+        $http.get('https://foot-on-click.herokuapp.com/weather').
         success(function(data) {
 
 
@@ -1128,7 +1128,7 @@ console.log("ghc");
 
 //.controller('NewsletterController', function($scope,$http) {
 //
-//        $http.get('http://localhost:3000/newslleter').
+//        $http.get('https://foot-on-click.herokuapp.com/newslleter').
 //        success(function(data) {
 //
 //
@@ -1165,7 +1165,7 @@ console.log("ghc");
  
  .factory('SendMailFactory', function($resource){
         //Resource
-        return $resource('http://localhost:3000/newslleter/send_mail',null, 
+        return $resource('https://foot-on-click.herokuapp.com/newslleter/send_mail',null, 
 	{
             'query':  {method:'GET', isArray:true}
         });
@@ -1290,7 +1290,7 @@ console.log("ghc");
 
     .controller('FbActuality', function($scope,$http) {
 
-        $http.get('http://localhost:3000/fb/data').
+        $http.get('https://foot-on-click.herokuapp.com/fb/data').
         success(function(data) {
 
 
@@ -1309,7 +1309,7 @@ console.log("ghc");
         .controller('AccountUserController', function($scope,$http) {
 
             $scope.users=[];
-            $http.get('http://localhost:3000/bet/userB').
+            $http.get('https://foot-on-click.herokuapp.com/bet/userB').
             success(function(data) {
 
 
@@ -1345,7 +1345,7 @@ console.log("ghc");
                     });
 
 
-            $http.get('http://localhost:3000/bet/betF').
+            $http.get('https://foot-on-click.herokuapp.com/bet/betF').
                 success(function(data){
 
 
@@ -1380,7 +1380,7 @@ console.log("ghc");
 
                              $scope.Solde=function(solde)
                              {
-                                 $http.get('http://localhost:3000/bet/userB').
+                                 $http.get('https://foot-on-click.herokuapp.com/bet/userB').
                                  success(function(data){
 
 
@@ -1435,9 +1435,9 @@ console.log("ghc");
                     objet: "anobjet",
                     message: "amessage"
                 };
-                $http.post('http://localhost:3000/claim', aa);
+                $http.post('https://foot-on-click.herokuapp.com/claim', aa);
             };
-            $http.get('http://localhost:3000/testtwilio').success(function(data, status) {
+            $http.get('https://foot-on-click.herokuapp.com/testtwilio').success(function(data, status) {
                 console.log(data);
             });
         })
