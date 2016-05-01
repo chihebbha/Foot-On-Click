@@ -132,6 +132,22 @@ app.get('/testtwilio', function(req, res) {
 
     });
 });
+app.get('/testtwilioReservation', function(req, res) {
+    client.sendMessage({
+        to: '+21626722919',
+        from: '+14439917726',
+        body: 'Reservation avec succée'
+    }, function(err, data) {
+        if (err){
+            console.log(err);
+        }else{
+            console.log(data);
+            res.json(data);
+        }
+
+
+    });
+});
 
 
 //end raja sms

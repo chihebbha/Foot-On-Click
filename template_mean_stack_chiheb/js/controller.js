@@ -756,7 +756,10 @@ console.log("ghc");
              $http.get('http://localhost:3000/reservation/AttaqueDroite12/'+$scope.date+'/'+$scope.partie).
         success(function(data) {
             $scope.weath=data;
-        });   
+        });  
+            $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
             
                      $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
@@ -783,6 +786,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });     
+             $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                 $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
             $scope.users=data;
@@ -809,6 +815,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });
+              $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                  $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
             $scope.users=data;
@@ -839,6 +848,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });
+               $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                   $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
             $scope.users=data;
@@ -864,6 +876,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });
+                $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                    $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
             $scope.users=data;
@@ -890,6 +905,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });    
+                 $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                  
                    $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
@@ -917,6 +935,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         }); 
+                  $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                   
                      $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
@@ -946,6 +967,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });   
+                   $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                       $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
             $scope.users=data;
@@ -971,6 +995,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });  
+                    $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                        $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
             $scope.users=data;
@@ -995,7 +1022,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });
-                     
+                     $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                         $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
             $scope.users=data;
@@ -1021,6 +1050,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         }); 
+                      $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
                          $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
             $scope.users=data;
@@ -1046,6 +1078,9 @@ console.log("ghc");
         success(function(data) {
             $scope.weath=data;
         });   
+             $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+                console.log(data);
+            });
              
                 $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
