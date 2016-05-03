@@ -126,26 +126,27 @@ p {
 /* header */
 header {
 	position:relative;
-	height:177px
+	height:320px
 }
 #logo {
 	display:block;
 	background:url(../images/logo.png) 0 0 no-repeat;
 	width:340px;
-	height:60px;
+	height:110px;
 	text-indent:-9999px;
-    margin-left: -160px
+    margin-left: -160px;
+    margin-top: 60px;
 }
 #icons {
 	float:right;
-	padding:34px 29px 0 0
+	padding: 127px 0px 0 0;
 }
 #icons li {
 	float:left;
 	padding-left:10px
 }
 #menu {
-	padding:33px 0 0
+    padding: 242px 0 0;
 }
 #menu li {
 	padding:26px 37px 23px 30px;

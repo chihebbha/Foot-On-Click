@@ -62,8 +62,8 @@ EmailVerif = function(recepient) {
   var mailOptions = {
     from: 'cyrine.arbi@esprit.tn',
     to:'cyrino.arbi21@gmail.com',
-    subject: 'subject',
-    text: ' newsletter '
+    subject: 'newletter',
+    text: 'bonjour vous pouvez consulter les actualité de notre site foot on click cordiallement'
   };
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {

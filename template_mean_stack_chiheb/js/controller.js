@@ -740,6 +740,11 @@ console.log("ghc");
         
         $scope.reserver1 = function ()
         {
+            
+            var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation1= true ;
             $scope.reservation2= false ;
             $scope.reservation3= false ;
@@ -757,6 +762,7 @@ console.log("ghc");
              $http.get('http://localhost:3000/reservation/AttaqueDroite12/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium).
 
 //    $http.get('https://foot-on-click.herokuapp.com/reservation/AttaqueDroite12/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium).
+             
 
         success(function(data) {
             $scope.weath=data;
@@ -783,6 +789,10 @@ console.log("ghc");
         
          $scope.reserver2 = function ()
         {
+             var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation2= true ;
             $scope.reservation1= false;
             $scope.reservation3= false ;
@@ -814,6 +824,10 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
          
           $scope.reserver3 = function ()
         {
+              var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation3= true ;
             $scope.reservation1= false;
             $scope.reservation2= false ;
@@ -848,7 +862,11 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
           
           
            $scope.reserver4 = function ()
-        {
+        { 
+               var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation4= true ;
             $scope.reservation1= false;
             $scope.reservation2= false ;
@@ -879,6 +897,10 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
            
             $scope.reserver5 = function ()
         {
+                var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation5= true ;
             $scope.reservation1= false;
             $scope.reservation2= false ;
@@ -910,6 +932,10 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
             
              $scope.reserver6 = function ()
         {
+                 var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation6= true ;
             $scope.reservation1= false;
             $scope.reservation2= false ;
@@ -941,7 +967,11 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
              
              
               $scope.reserver8 = function ()
-        {
+        { 
+                  var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation8= true ;  
              $scope.reservation1= false;
             $scope.reservation2= false ;
@@ -976,6 +1006,10 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
               
                $scope.reserver9 = function ()
         {
+                   var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation9= true ;
             $scope.reservation1= false ;
            $scope.reservation2= false ;
@@ -1006,6 +1040,10 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
                
                 $scope.reserver10 = function ()
         {
+                    var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation10= true ; 
             $scope.reservation2= false ;
             $scope.reservation3= false ;
@@ -1035,6 +1073,10 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
                 
                  $scope.reserver12 = function ()
         {
+                     var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation12= true ; 
              $scope.reservation2= false ;
             $scope.reservation3= false ;
@@ -1065,6 +1107,10 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
                  
                   $scope.reserver13 = function ()
         {
+                      var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation13= true ;  
             $scope.reservation2= false ;
             $scope.reservation3= false ;
@@ -1094,6 +1140,10 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
                   
          $scope.reserver11 = function ()
         {
+             var lyoum=new Date();
+            if($scope.date<lyoum){
+                alert("vous pouvez pas choisir une date antérieure");
+                 }
             $scope.reservation11= true ;
              $scope.reservation1= false ;
              $scope.reservation2= false ;
