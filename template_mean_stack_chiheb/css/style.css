@@ -203,11 +203,20 @@ no-repeat;
 	overflow:hidden
 }
 #content1 input {
-    margin-left: 53px;
+    margin-left: 68px;
     border-radius: 5px;
 
 }
 #content1 select {
+margin-left: 15px;
+       border-radius: 11px;
+    height: 22px;
+    
+    margin-top: 5px;
+
+}
+#content2 select {
+margin-left: 5px;
        border-radius: 11px;
     height: 22px;
     

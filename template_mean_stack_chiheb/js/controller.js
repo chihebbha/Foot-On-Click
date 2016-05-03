@@ -753,13 +753,18 @@ console.log("ghc");
             $scope.reservation12= false ;
             $scope.reservation13= false ;
             
-             $http.get('http://localhost:3000/reservation/AttaqueDroite12/'+$scope.date+'/'+$scope.partie).
+             $http.get('http://localhost:3000/reservation/AttaqueDroite12/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium).
         success(function(data) {
             $scope.weath=data;
         });  
             $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
                 console.log(data);
             });
+            
+             $scope.DisplayAlert = function (message) {
+                $window.alert(message);
+            }
+
             
                      $http.get('http://localhost:3000/reservation/user').
         success(function(data) {
@@ -1145,7 +1150,14 @@ console.log("ghc");
     
     //////
     
-   
+  
+    
+    
+    
+    
+    
+    
+    ///
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/Newsletter', {
@@ -1303,6 +1315,13 @@ console.log("ghc");
 
 
 
+    
+    
+    
+    
+    
+    
+    
     
     //--------------Raja Account-------
 

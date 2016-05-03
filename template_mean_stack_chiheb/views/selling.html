@@ -6,7 +6,7 @@
 
 <div class="body2">
   <div class="main">
-    <section id="content1" >
+    <section id="content1">
         <h3 class="pad_bot1 pad_top1">choose the booking date</h3>
 
      <label>book :</label>
@@ -23,9 +23,18 @@
        <option value="part 7">part 7: 22=>23:30</option>
         </select>              
         <br>
+      <section id="content2">
+        <label>football stadium :</label> 
+        <select name ="stadium" ng-model="stadium">
+       <option value="stadium 1">stadium 1  </option>
+       <option value="stadium 2">stadium 2  </option>
+       <option value="stadium 3">stadium 3  </option>
+       
+        </select>              
         <br>
+        <br>
+        </section>
         
-
    <h3 class="pad_bot1 pad_top1">Reserved position</h3>     
 
         <div class="imageBack" >
@@ -161,19 +170,23 @@
         end   partie gauche du terrain
 -->
             
+            
+            
             </div>
         <div ng-show="reservation1 || reservation2|| reservation3|| reservation4|| reservation5|| reservation6|| reservation8|| reservation9|| reservation10|| reservation11 || reservation12 ||reservation13">
        
-          
-Success! Book sent successfully
+          <div class="alert alert-success">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Success!</strong> Book sent successfully.
+</div>
+
  
        
          <div ng-repeat="user in users">
         
             {{user.name}}
              <span>&nbsp;</span>
-        <input type="button" ng-click="inviter(user._id.$oid)" value="inviter"  >  
-             <span>&nbsp;</span> <a href="#" class="button">invite</a> 
+        <input class="button"  type="button" ng-click="inviter(user._id.$oid)" value="inviter"  >  
         
         
         </div>
