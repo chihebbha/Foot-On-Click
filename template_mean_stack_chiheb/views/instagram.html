@@ -1,12 +1,12 @@
 <div ng-controller="instagramController">
-   
+   <section class="containerInsta" >
 <div class="content-section-b">
 <div class="container">
     <div class="row text-center">
         <div ng-repeat="ins in insta ">
         <div class="col-sm-6">
       <img src="{{ins.images.low_resolution.url}}" alt="...">
-    <a href="#"><b>Likes : </b> <span class="badge">{{ins.likes.count}}</span></a>
+<!--    <a href="#"><b>Likes : </b> <span class="badge">{{ins.likes.count}}</span></a>-->
       <div class="caption">
         <h3>{{ins.location.name}}</h3>
         <i><b>Tags</b></i>
@@ -20,5 +20,5 @@
 </div>
 
 </div>    
-
+</section>
 </div>

@@ -232,6 +232,15 @@ margin-left: 5px;
     margin-top: 5px;
 
 }
+
+
+
+#containerInsta {
+
+width: 84%;
+
+
+}
 /* If an image is wrapped in a link */
 .nivoSlider a.nivo-imageLink {
 	position:absolute;
