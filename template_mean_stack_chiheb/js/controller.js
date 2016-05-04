@@ -2,6 +2,38 @@
 
 .controller('BetInFicheParis',function($scope){
 
+    $scope.toEnglish=function(){
+        $scope.en=true;
+        $scope.fr=false;
+        $scope.ar=false;
+        $scope.sp=false;
+        
+    }  
+    $scope.toFrensh=function(){
+        $scope.en=false;
+        $scope.fr=true;
+        $scope.ar=false;
+        $scope.sp=false;
+        
+    }  
+    $scope.toSpanish=function(){
+        $scope.en=false;
+        $scope.fr=false;
+        $scope.ar=false;
+        $scope.sp=true;
+        
+    }  
+    $scope.toArabic=function(){
+        $scope.en=false;
+        $scope.fr=false;
+        $scope.ar=true;
+        $scope.sp=false;
+        
+    }  
+     
+        
+        
+        
 var datetawa=new Date();
          $scope.date0=new Date();
           $scope.date1=datetawa.setDate(datetawa.getDate()+1);
