@@ -1,5 +1,5 @@
 
-angular.module('footApplication', ['ngRoute','footApplication.controllers','footApplication.services','ngResource'])
+angular.module('footApplication', ['ngRoute','footApplication.controllers','footApplication.services','ngResource','ngMaterial'])
 
 .config(['$routeProvider',
   function($routeProvider) {
