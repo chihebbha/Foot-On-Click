@@ -6,7 +6,7 @@
     <meta name="robots" content="follow" >
     <meta name="google" content="xxxx">
     <meta name="description" content="Site de Paris en ligne et visualisation des match en direct crée par un developpeur informatique qui maitrise les nouvelle technologie web et réferencement , logiciels java web services node conception qualité mean angular mongo script dotNet ESPRIT full stack ">
-       <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+<!--       <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/ExternelLink/font-awesome2.min.css">
 
@@ -31,23 +31,13 @@
     
         <script src="js/cyrineMap.js" ></script>
     
-    <!-- Angular Material requires Angular.js Libraries -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
 
-  <!-- Angular Material Library -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-<!--        <script src="script-tags-for-development.js"></script>-->
     <script src="js/Externeljs/js.js" ></script>
     <script src="js/Externeljs/angular.js" ></script>
     <script src="js/Externeljs/ng-map.js" ></script>
     <script src="js/Externeljs/angular.js" ></script>
  <script src="js/Externeljs/markerclusterer.js" ></script>
-<!--<link href="custom-marker.css"  rel="stylesheet" />-->
 
-    
     
     
     
@@ -63,7 +53,7 @@
             </head>
     <body ng-app="footApplication" >
         <div ng-controller="BetInFicheParis"  ng-init="fr=true;en=false;ar=false;sp=false;">
-<div class="body1" ng-show="fr||ar">
+<div class="body1" ng-show="fr">
   <div class="main">
     <!-- header -->
     <header>
@@ -86,7 +76,7 @@
                 <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
 
 
-            <a href="#/account">Account</a>
+           
                       
                  
                  
@@ -100,16 +90,24 @@
 
   
   
-    <md-select  ng-model="language"  style="width: 30px;background-color: grey;margin-bottom: 40px;
-">
-      <md-option ng-click="toEnglish();" ><img  src="images/drapeau%20united%20kingdom.png"  style="width:30px"/> english</md-option>
-        <md-option  ng-click="toArabic();" > <img src="images/arabfag.jpg" style="width:30px"/> arabic</md-option>
-        <md-option ng-click="toFrensh();" ><img src="images/drapeauFr.jpg"  style="width:30px" selected="selected"/> frensh</md-option>
-        <md-option ng-click="toSpanish();" ><img src="images/flag_spain_02.jpg"  style="width:30px"/> espagnol</md-option>
-    </md-select>
+   
+        
+          
+         
+          
+          <select >
+       
+             <option ng-click="toSpanish();">español</option>
+          <option ng-click="toEnglish();"> English</option>
+              
+              <option ng-click="toArabic();"> عربي</option>
+              
+               <option ng-click="toFrensh();" > Francais</option>
+          
+          
+          </select>
+    <img  src="images/drapeauFr.jpg"  style="width:20px"/>
   
-  
-
 
 
       </li>
@@ -183,20 +181,30 @@
                                         <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
 
                                          <a href="#/account">Account</a></li>
-  <li>
+    
+      <li >
+   <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+
+
+  
+  
    
-
-
-  
-  
-<md-select  ng-model="language"  style="width: 30px;background-color: grey;margin-bottom: 40px;
-">
-      <md-option ng-click="toEnglish();" ><img  src="images/drapeau%20united%20kingdom.png"  style="width:30px"/> english</md-option>
-        <md-option  ng-click="toArabic();" > <img src="images/arabfag.jpg" style="width:30px"/> arabic</md-option>
-        <md-option ng-click="toFrensh();" ><img src="images/drapeauFr.jpg"  style="width:30px" selected="selected"/> frensh</md-option>
-        <md-option ng-click="toSpanish();" ><img src="images/flag_spain_02.jpg"  style="width:30px"/> espagnol</md-option>
-    </md-select>
-  
+        
+          
+         
+          
+           <select >
+       
+             <option ng-click="toSpanish();">español</option>
+          <option ng-click="toEnglish();"> English</option>
+              
+              <option ng-click="toArabic();"> عربي</option>
+              
+               <option ng-click="toFrensh();" > Francais</option>
+          
+          
+          </select>
+    <img  src="images/drapeau%20united%20kingdom.png"  style="width:20px"/>
   
 
 
@@ -272,20 +280,29 @@
 
                                         <a href="#/account">Cuenta</a>
                                   </li>
-                                  <li>
+             <li >
+   <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+
+
+  
+  
    
-
-
-  
-  
-    <md-select  ng-model="language"  style="width: 30px;background-color: grey;margin-bottom: 40px;
-">
-      <md-option ng-click="toEnglish();" ><img  src="images/drapeau%20united%20kingdom.png"  style="width:30px"/> english</md-option>
-        <md-option  ng-click="toArabic();" > <img src="images/arabfag.jpg" style="width:30px"/> arabic</md-option>
-        <md-option ng-click="toFrensh();" ><img src="images/drapeauFr.jpg"  style="width:30px" selected="selected"/> frensh</md-option>
-        <md-option ng-click="toSpanish();" ><img src="images/flag_spain_02.jpg"  style="width:30px"/> espagnol</md-option>
-    </md-select>
-  
+        
+          
+         
+          
+           <select >
+       
+             <option ng-click="toSpanish();">español</option>
+          <option ng-click="toEnglish();"> English</option>
+              
+              <option ng-click="toArabic();"> عربي</option>
+              
+               <option ng-click="toFrensh();" > Francais</option>
+          
+          
+          </select>
+    <img  src="images/flag_spain_02.jpg"  style="width:20px"/>
   
 
 
@@ -321,6 +338,115 @@
 
 
 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="body1" ng-show="ar">
+  <div class="main">
+    <!-- header -->
+    <header>
+      <h1><a href="index.html" id="logo"></a></h1>
+      <div class="wrapper">
+        <nav> 
+  
+  <ul id="icons" >
+       
+        
+         <li>
+             <i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i>
+
+            <a href="#/statistic">إحصائيات</a>  </li>
+            <li>
+             <i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+           
+            <a href="#/Newsletter">النشرة</a></li>
+             <li>
+                <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
+
+
+            <a href="#/account">حساب</a>
+                      
+                 
+                 
+            
+
+      </li>
+    
+      <li >
+   <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+
+
+  
+  
+   
+        
+          
+         
+          
+          <select >
+       
+             <option ng-click="toSpanish();">español</option>
+          <option ng-click="toEnglish();"> English</option>
+              
+              <option ng-click="toArabic();"> عربي</option>
+              
+               <option ng-click="toFrensh();" > Francais</option>
+          
+          
+          </select>
+    <img  src="images/arabfag.jpg"  style="width:20px"/>
+  
+
+
+      </li>
+
+        </ul>
+         
+     
+        <ul id="menu" >
+          <li id="menu_active"><a href="#/">Accueil</a></li>
+          <li   ><a href="#/buying">Paris</a></li>
+          <li><a href="#/selling">Résevation</a></li>
+          <li><a href="#/pastMatch">Match</a></li>
+            
+           
+          <li><a href="#/reclamation">Réclamation</a></li>
+            
+<!--            <li><a href="#/weather">weather</a></li>-->
+            
+            
+            <li><a href="#/chat">Chat</a></li>
+            <li><a href="#/About">A propos</a></li>
+
+        </ul>
+      </nav>
+    </header>
+    <!-- / header -->
+  </div>
+</div>
 
 
 
