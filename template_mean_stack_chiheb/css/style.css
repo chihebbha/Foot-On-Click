@@ -210,11 +210,34 @@ no-repeat;
 
 }
 
+
+
+#bouton input{
+    margin-left: 58px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100px;
+    line-height: 26px;
+    height: 26px;
+    color: #fff;
+    text-decoration: none;
+    background: url(../images/button_bg.png) #87a310;
+    text-align: center;
+}
+
 #con-for2 input {
 font-family: inherit;
     font-size: inherit;
     line-height: inherit;
 border-radius: 3px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 3px;
+    margin-left: 15px;
+    border-radius: 11px;
+    height: 22px;
+    margin-top: 5px;
 }
 
 #content1 select {

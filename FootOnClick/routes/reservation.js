@@ -45,12 +45,12 @@ mLab.listDocuments(options, function (err, data) {
 
 
 
-router.get('/:pos/:date/:partie/:stadium',function(req, res, next){
+router.get('/:pos/:date/:partie/:stadium/:iduser',function(req, res, next){
 
     mLab.insertDocuments({
         database: 'footonclick',
         collectionName: 'reservation',
-documents: {date_match:req.params.date,Partie:req.params.partie,position:req.params.pos,stadium:req.params.stadium}
+documents: {date_match:req.params.date,Partie:req.params.partie,position:req.params.pos,stadium:req.params.stadium,userreserv: req.params.iduser}
     },function(req,res){
         console.log("ajout reservation avec succee ");
 
