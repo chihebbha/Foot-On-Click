@@ -1,34 +1,35 @@
 
 <div ng-controller="ReclamationCtrl">
-<form method="post">
+<form form name="formNewsletter" ng-submit="SendMail"  method="post">
+    <section id="con-for2">
 
     <div class="con-for">
         <h2 class="pad_bot1 pad_top1">Claim</h2>
 
-        <div class="form-field contact-name">
-            <span>Subject :</span>
-    <input type="text" class="con-txt" placeholder="Subject" maxlength=20 minlength=5  ng-pattern="[a-zA-Z]" data-ng-model="claim.objet">
+
+        <div class="con-for2">
+            <fieldset>
+
+            <div class="form-field contact-name">
+                <span>Subject:</span>
+                <input type="text" class="con-txt" placeholder="subject" maxlength=20 minlength=5  ng-pattern="[a-zA-Z]"  data-ng-model="claim.objet" required/>
             </div>
-    <br>
-    <br>
-        <div class="form-field contact-email">
-            <span> Text :</span>
-        <input type="text" name="message"  class="con-txt" placeholder="Text" maxlength=20 minlength=5  ng-pattern="[a-zA-Z]"  data-ng-model="claim.message">
+            <br>
+            <div class="form-field contact-email">
+                <span>Claiming:</span>
+                <input type="email" class="con-txt" placeholder="claiming" data-ng-model="claim.message"required/>
             </div>
-    <br>
+
+            <br>
+            <div class="form-field contact-btn">   <span>&nbsp;</span> <a href="#" class="button">send</a>  </div>
 
 
-     <div class="form-field contact-btn">   <span>&nbsp;</span> <a href="#" class="button">send</a>  </div>
+                </fieldset>
+        </div>
 
-        <div class="form-field news-chk">
-
-
-            <label for="1" > I agree to send my claim </label>
-
-    <input  type="checkbox" ng-click="recalmmer(claim)" id="1" required />
 
         </div>
-        </div>
+        </section>
 </form>
 
 </div>
