@@ -64,67 +64,67 @@ router.get('/userB', function(req, res, next) {
 
 ////-----------------------------------------------
 
-//
-// var betM = "http://localhost:3000/bet/betF";
-//
-//  var userB ="http://localhost:3000/bet/userB";
-//
-//router.get('/resultBet' , function (req , res , next){
-//
-//  for (f in url.fixtures)
-//  {
-//         if( f.links.self.href == betM.matchs.id  )
-//         {
-//
-//             if ((f.result.goalsHomeTeam > f.result.goalsAwayTeam) && (betM.choix == '1'))
-//             {
-//                 userB.solde = betM.mise * betM.cote ;
-//
-//             }
-//
-//             else
-//             {
-//                 userB.sole= userB.solde ;
-//
-//             }
-//
-//             if ((f.result.goalsHomeTeam < f.result.goalsAwayTeam) && (betM.choix == '2'))
-//
-//             {
-//                 userB.solde = betM.mise * betM.cote ;
-//
-//             }
-//
-//             else
-//             {
-//                 userB.sole= userB.solde ;
-//
-//             }
-//
-//             if ((f.result.goalsHomeTeam ==f.result.goalsAwayTeam) && (betM.choix == 'x'))
-//
-//             {
-//                 userB.solde = betM.mise * betM.cote ;
-//
-//             }
-//
-//             else
-//             {
-//                 userB.sole= userB.solde ;
-//
-//             }
-//
-//
-//
-//
-//
-//
-//                 }
-//
-//     }
-//
-//
-// });
+
+ var betM = "http://localhost:3000/bet/betF";
+
+  var userB ="http://localhost:3000/bet/userB";
+
+router.get('/resultBet' , function (req , res , next){
+
+  for (f in url.fixtures)
+  {
+         if( f.links.self.href == betM.matchs.id  )
+         {
+
+             if ((f.result.goalsHomeTeam > f.result.goalsAwayTeam) && (betM.choix == '1'))
+             {
+                 userB.solde = betM.mise * betM.cote ;
+
+             }
+
+             else
+             {
+                 userB.sole= userB.solde ;
+
+             }
+
+             if ((f.result.goalsHomeTeam < f.result.goalsAwayTeam) && (betM.choix == '2'))
+
+             {
+                 userB.solde = betM.mise * betM.cote ;
+
+             }
+
+             else
+             {
+                 userB.sole= userB.solde ;
+
+             }
+
+             if ((f.result.goalsHomeTeam ==f.result.goalsAwayTeam) && (betM.choix == 'x'))
+
+             {
+                 userB.solde = betM.mise * betM.cote ;
+
+             }
+
+             else
+             {
+                 userB.sole= userB.solde ;
+
+             }
+
+
+
+
+
+
+                 }
+
+     }
+
+
+ });
 
 
         module.exports = router;
