@@ -775,14 +775,17 @@ console.log("ghc");
             $scope.reservation10= true ;
               $scope.reservation13= true ;
             
-             $scope.user1="rajé Jlidi";
-            $scope.user2="cyrine larbi";
-            $scope.user3="chiheb Ben HajAli";
+             $scope.user1="rajé_Jlidi";
+            $scope.user2="cyrine_larbi";
+            $scope.user3="chiheb_BenHajAli";
             
         
         }
         
-         $scope.resev = function() {
+         
+         
+         
+          $scope.resev = function() {
          alert("successfully booking ");
          }
          
@@ -808,7 +811,7 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= true ;
-            $scope.userr="khalil benboubakker";     
+            $scope.userr="khalil_benboubakker";     
               
 
              $http.get('http://localhost:3000/reservation/AttaqueDroite12/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
@@ -859,7 +862,7 @@ console.log("ghc");
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= true;
-            $scope.userr="khalil benboubakker";  
+            $scope.userr="khalil_benboubakker";  
              
 
 $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
@@ -897,7 +900,7 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13=true ;
-            $scope.userr="khalil benboubakker"; 
+            $scope.userr="khalil_benboubakker"; 
              
 
  $http.get('http://localhost:3000/reservation/Defance1/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
@@ -939,7 +942,7 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= true ;
-            $scope.userr="khalil benboubakker";  
+            $scope.userr="khalil_benboubakker";  
                
          
                $http.get('http://localhost:3000/reservation/gardien2/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
@@ -976,7 +979,7 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= true ;
-          $scope.userr="khalil benboubakker";   
+          $scope.userr="khalil_benboubakker";   
                 
  
                   $http.get('http://localhost:3000/reservation/Defance2/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
@@ -1014,7 +1017,7 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= true ;
-          $scope.userr="khalil benboubakker";     
+          $scope.userr="khalil_benboubakker";     
 
                   $http.get('http://localhost:3000/reservation/AttaqueDroite11/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
         success(function(data) {
@@ -1052,7 +1055,7 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
             $scope.reservation11= false ;
             $scope.reservation12= false ;
             $scope.reservation13= true ;
-            $scope.userr="khalil benboubakker"; 
+            $scope.userr="khalil_benboubakker"; 
                  
                  $http.get('http://localhost:3000/reservation/AttaqueDroite12s/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
         success(function(data) {
@@ -1074,77 +1077,77 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
               
               
               
-               $scope.reserver9 = function ()
-        {
-                   var lyoum=new Date();
-            if($scope.date<lyoum){
-                alert("vous pouvez pas choisir une date antérieure");
-                 }
-            $scope.reservation9= true ;
-            $scope.reservation1= false ;
-           $scope.reservation2= false ;
-            $scope.reservation3= false ;
-            $scope.reservation4= false ;
-            $scope.reservation6= false ;
-            $scope.reservation5= false ;
-            $scope.reservation8= false ;
-            $scope.reservation10= true ;
-            $scope.reservation11= false ;
-            $scope.reservation12= false ;
-            $scope.reservation13= true;
-           $scope.userr="khalil benboubakker";  
-                  
-                 $http.get('http://localhost:3000/reservation/Defance2/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
-        success(function(data) {
-            $scope.weath=data;
-        });   
-                   $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
-                console.log(data);
-            });
-                    
-                     $http.get('http://localhost:3000/reservation/user').
-
-        success(function(data) {
-            $scope.users=data;
-        }); 
-        }
+//               $scope.reserver9 = function ()
+//        {
+//                   var lyoum=new Date();
+//            if($scope.date<lyoum){
+//                alert("vous pouvez pas choisir une date antérieure");
+//                 }
+//            $scope.reservation9= true ;
+//            $scope.reservation1= false ;
+//           $scope.reservation2= false ;
+//            $scope.reservation3= false ;
+//            $scope.reservation4= false ;
+//            $scope.reservation6= false ;
+//            $scope.reservation5= false ;
+//            $scope.reservation8= false ;
+//            $scope.reservation10= true ;
+//            $scope.reservation11= false ;
+//            $scope.reservation12= false ;
+//            $scope.reservation13= true;
+//           $scope.userr="khalil_benboubakker";  
+//                  
+//                 $http.get('http://localhost:3000/reservation/Defance2/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
+//        success(function(data) {
+//            $scope.weath=data;
+//        });   
+//                   $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+//                console.log(data);
+//            });
+//                    
+//                     $http.get('http://localhost:3000/reservation/user').
+//
+//        success(function(data) {
+//            $scope.users=data;
+//        }); 
+//        }
                
-               
-                $scope.reserver10 = function ()
-        {
-                    var lyoum=new Date();
-            if($scope.date<lyoum){
-                alert("vous pouvez pas choisir une date antérieure");
-                 }
-            $scope.reservation10= true ; 
-            $scope.reservation2= false ;
-            $scope.reservation3= false ;
-            $scope.reservation4= false ;
-            $scope.reservation6= false ;
-            $scope.reservation5= false ;
-            $scope.reservation9= true ;
-            $scope.reservation8= false ;
-            $scope.reservation11= false ;
-            $scope.reservation12= false ;
-            $scope.reservation1= false ;
-            $scope.reservation13= true ;
-            $scope.userr="khalil benboubakker";     
-
-                    
-                  $http.get('http://localhost:3000/reservation/Defance3/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
-        success(function(data) {
-            $scope.weath=data;
-        });  
-                    $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
-                console.log(data);
-            });
-                       
-                     $http.get('http://localhost:3000/reservation/user').
-
-        success(function(data) {
-            $scope.users=data;
-        }); 
-        }
+//               
+//                $scope.reserver10 = function ()
+//        {
+//                    var lyoum=new Date();
+//            if($scope.date<lyoum){
+//                alert("vous pouvez pas choisir une date antérieure");
+//                 }
+//            $scope.reservation10= true ; 
+//            $scope.reservation2= false ;
+//            $scope.reservation3= false ;
+//            $scope.reservation4= false ;
+//            $scope.reservation6= false ;
+//            $scope.reservation5= false ;
+//            $scope.reservation9= true ;
+//            $scope.reservation8= false ;
+//            $scope.reservation11= false ;
+//            $scope.reservation12= false ;
+//            $scope.reservation1= false ;
+//            $scope.reservation13= true ;
+//            $scope.userr="khalil_benboubakker";     
+//
+//                    
+//                  $http.get('http://localhost:3000/reservation/Defance3/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
+//        success(function(data) {
+//            $scope.weath=data;
+//        });  
+//                    $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+//                console.log(data);
+//            });
+//                       
+//                     $http.get('http://localhost:3000/reservation/user').
+//
+//        success(function(data) {
+//            $scope.users=data;
+//        }); 
+//        }
                 
                  $scope.reserver12 = function ()
         {
@@ -1164,7 +1167,7 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
             $scope.reservation1= false ;
              $scope.reservation8= false ;
             $scope.reservation13= true ;
-           $scope.userr="khalil benboubakker";  
+           $scope.userr="khalil_benboubakker";  
                    
 
                   $http.get('http://localhost:3000/reservation/Defance4/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
@@ -1182,41 +1185,41 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
         }); 
         }
                  
-                 
-                  $scope.reserver13 = function ()
-        {
-                      var lyoum=new Date();
-            if($scope.date<lyoum){
-                alert("vous pouvez pas choisir une date antérieure");
-                 }
-            $scope.reservation13= true ;  
-            $scope.reservation2= false ;
-            $scope.reservation3= false ;
-            $scope.reservation4= false ;
-            $scope.reservation6= false ;
-            $scope.reservation5= false ;
-            $scope.reservation9= true ;
-            $scope.reservation10= true ;
-            $scope.reservation11= false ;
-            $scope.reservation12= false ;
-            $scope.reservation1= false ;
-             $scope.reservation8= false ;
-             $scope.userr="khalil benboubakker";     
-
-                    $http.get('http://localhost:3000/reservation/Defance5/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
-        success(function(data) {
-            $scope.weath=data;
-        }); 
-                      $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
-                console.log(data);
-            });
-                       
-                     $http.get('http://localhost:3000/reservation/user').
-
-        success(function(data) {
-            $scope.users=data;
-        }); 
-        }
+//                 
+//                  $scope.reserver13 = function ()
+//        {
+//                      var lyoum=new Date();
+//            if($scope.date<lyoum){
+//                alert("vous pouvez pas choisir une date antérieure");
+//                 }
+//            $scope.reservation13= true ;  
+//            $scope.reservation2= false ;
+//            $scope.reservation3= false ;
+//            $scope.reservation4= false ;
+//            $scope.reservation6= false ;
+//            $scope.reservation5= false ;
+//            $scope.reservation9= true ;
+//            $scope.reservation10= true ;
+//            $scope.reservation11= false ;
+//            $scope.reservation12= false ;
+//            $scope.reservation1= false ;
+//             $scope.reservation8= false ;
+//             $scope.userr="khalil_benboubakker";     
+//
+//                    $http.get('http://localhost:3000/reservation/Defance5/'+$scope.date+'/'+$scope.partie+'/'+$scope.stadium+'/'+"57155291e4b09686f6b2b39b").
+//        success(function(data) {
+//            $scope.weath=data;
+//        }); 
+//                      $http.get('http://localhost:3000/testtwilioReservation').success(function(data, status) {
+//                console.log(data);
+//            });
+//                       
+//                     $http.get('http://localhost:3000/reservation/user').
+//
+//        success(function(data) {
+//            $scope.users=data;
+//        }); 
+//        }
                   
          $scope.reserver11 = function ()
         {
@@ -1235,7 +1238,7 @@ $http.get('http://localhost:3000/reservation/AttaqueDroite22/'+$scope.date+'/'+$
             $scope.reservation10= true ;
             $scope.reservation12= false ;
             $scope.reservation8= false ;
-            $scope.userr="khalil benboubakker";  
+            $scope.userr="khalil_benboubakker";  
             
 
              

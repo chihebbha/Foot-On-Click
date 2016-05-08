@@ -663,6 +663,14 @@ a.jqTransformSelectOpen {
  width: 420px;
     height: 270px;
 }
+
+
+
+
+#USER {
+color: black;
+}
+
 #arrGauche1{
    margin-left: 233px;
     margin-top: 188px;
@@ -796,9 +804,9 @@ select {
     select {padding-right:18px}
 }
 
-label {position:relative}
+
 label:after {
-    content:'<>';
+   
     font:11px "Consolas", monospace;
     color:#aaa;
     -webkit-transform:rotate(90deg);
