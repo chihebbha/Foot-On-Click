@@ -160,6 +160,16 @@ header {
 	float:left;
 	padding-left:10px
 }
+
+
+#icons1 {
+	float:right;
+	padding: 27px 0px 0 0;
+}
+#icons1 li {
+	float:left;
+	padding-left:10px
+}
 #menu {
     padding: 242px 0 0;
 }
@@ -665,8 +675,8 @@ a.jqTransformSelectOpen {
 }*/
  .well {
     background-color: grey;
-    width: 230px;
-    height: 30px;
+    width: 352px;
+    height: 38px;
     margin-bottom: auto;
     text-align: center;
     color: black;
@@ -784,7 +794,7 @@ position: absolute;
 }*/
 hr{
     width: 500px;
-    border-color: darkslategrey;
+    border-color: rgba(47, 79, 79, 0);
 }
 th img{
     margin-left: 200px;

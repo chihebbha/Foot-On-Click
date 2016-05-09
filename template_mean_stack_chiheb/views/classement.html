@@ -1,21 +1,35 @@
 
 
-<div ng-controller="classementCTRL" ng-init="deutch=0;frensh=0;english=0;spanish=0;italian=0;portugal=0;">
+<div ng-controller="classementCTRL" ng-init="deutch=0;frensh=0;english=0;spanish=0;italian=0;portugal=0;" style="padding-left:100px;">
     
     
     
     <nav>
-  <ul class="pagination">
-   
-    <li ng-click="spanish=0;deutch=1;frensh=0;english=0;italian=0;portugal=0;"><a>Bundesliga</a></li>
-    <li ng-click="spanish=0;deutch=0;frensh=1;english=0;italian=0;portugal=0;"><a>ligue 1</a></li>
-    <li ng-click="spanish=0;deutch=0;frensh=0;english=1;italian=0;portugal=0;"><a>ligue one</a></li>
-    <li ng-click="spanish=1;deutch=0;frensh=0;english=0;italian=0;portugal=0;"><a>Primera Division</a></li>
-    <li ng-click="spanish=0;deutch=0;frensh=0;english=0;italian=1;portugal=0;"><a>Serie A</a></li>
-    <li ng-click="spanish=0;deutch=0;frensh=0;english=0;italian=0;portugal=1;"><a>Portugal ligua</a></li>
-   
-  </ul>
-</nav>
+     <ul id="icons1"  >
+
+         <li >
+             <img src = "images/ligue/Bundesliga_Logo.png" style="width : 30px">
+            <p ng-click="spanish=0;deutch=1;frensh=0;english=0;italian=0;portugal=0;" style="display:inline"><a>Bundesliga</a></p></li>
+          <li >
+             <img src = "images/ligue/ligue1.png" style="width : 30px">
+            <p ng-click="spanish=0;deutch=0;frensh=1;english=0;italian=0;portugal=0;" style="display:inline"><a>ligue 1</a></p></li>
+           <li >
+          <img src = "images/ligue/ligueone.png" style="width : 30px">
+            <p ng-click="spanish=0;deutch=0;frensh=0;english=1;italian=0;portugal=0;" style="display:inline"><a>ligue one </a></p></li>
+           <li >
+          <img src = "images/ligue/spanich.png" style="width : 30px">
+            <p ng-click="spanish=1;deutch=0;frensh=0;english=0;italian=0;portugal=0;" style="display:inline"><a> Primera Division </a></p></li>
+          <li >
+             <img src = "images/ligue/calcio.png" style="width : 24px">
+            <p ng-click="spanish=0;deutch=0;frensh=0;english=0;italian=1;portugal=0;" style="display:inline"><a>  Serie A </a></p></li>
+          <li >
+            <img src = "images/ligue/Portugal.png" style="width : 30px">
+            <p ng-click="spanish=0;deutch=0;frensh=0;english=0;italian=0;portugal=1;" style="display:inline"><a>   Portugal ligua </a></p></li>
+         
+         
+         <ul
+       </nav>  
+  
     
     
     

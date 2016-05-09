@@ -1,4 +1,4 @@
-<div ng-controller="reservationPlaController">
+<div ng-controller="reservationPlaController" style="padding-left:250px;">
     
     
       <div class="con-for">
@@ -8,7 +8,7 @@
   <div class="main">
     <section id="content1">
         <h3 class="pad_bot1 pad_top1">choose the booking date</h3>
-
+<br>
      <label>book :</label>
         <input  name="date_book" type="datetime-local" ng-model="date" placeholder="date Booking" >
        <br>
@@ -33,6 +33,7 @@
         </select> 
           <br>
           <br>
+          <br>
         <section id="bouton">
         <input class="button"  type="button"  value="Chek reservation" ng-click="show()"  >  
         </section>
@@ -41,7 +42,7 @@
         
         <br>
    <h3 class="pad_bot1 pad_top1">Reserved position</h3>     
-
+<br>
         <div class="imageBack" >
             
             <div id="aileGauche" ng-show="!reservation1">
@@ -242,6 +243,7 @@
             
  <br>
      <h3 class="pad_bot1 pad_top1">Invited your friends</h3>    
+            <br>
          <div ng-repeat="user in users">
         
             {{user.name}}

@@ -11,15 +11,40 @@
    
   </ul>
 </nav>
+
+<!--
+
+<nav>
+     <ul id="icons1" ng-init="jour1=1;jour2=0;" >
+
+         <li >
+             <img src = "images/ligue/Bundesliga_Logo.png" style="width : 30px">
+              <li ng-click="jour1=1;jour2=0;"><a>Today {{date0 | date:'EEE d-MMM'}}</a></li>
+            </li>
+          <li >
+              
+                <li >
+             <img src = "images/ligue/Bundesliga_Logo.png" style="width : 30px">
+             <li ng-click="jour1=0;jour2=1;"><a>Tomorrow {{date1 | date:'EEE d-MMM'}}</a></li>
+            </li>
+          <li >
+             
+         
+         
+         <ul
+       </nav>  
+-->
+
+
          
 <!---------------------match of the day -------------------------->
-
+<div ng-controller="GetAllBetItalia">
           <div class="pad_left1" ng-if="jour1==1">
             <div class="pad2">
               
             <center><h2 class="pad_bot1 pad_top1">Matchs of the day</h2></center>
           </div>
-             <table ng-controller="GetAllBetItalia">
+             <table >
                 
                       <tr>
                      
@@ -35,7 +60,7 @@
 
 
 
-                 <th ng-if="italianMatch.length != 0" style=": center">-----------------------<br><u>| Italian league |</u><br>-----------------------</th>
+                 <th ng-if="italianMatch.length != 0" style=": center">-----------------------<br><u><h3 class="pad_bot1 pad_top1">| Italian league |</u><br>-----------------------</th>
                  <tr ng-repeat="nn in italianMatch">
                      
                      
@@ -154,8 +179,6 @@
                            </td>   
               </tr>
                  
-                 
-                 
                  <th ng-if="frenshMatch.length != 0" style=": center">-----------------------<br><u>| Ligue francaise |</u><br>-----------------------</th>                 
                        <tr ng-repeat="nn in frenshMatch">
                      
@@ -239,11 +262,14 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                      
-                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" > <div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"><input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="addBetInFiche('GD Estoril Praia 	
+','FC Arouca',1.67,'GD Estoril','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="addBetInFiche('GD Estoril Praia 	
+','FC Arouca',2,'nul','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="addBetInFiche('GD Estoril Praia 	
+','FC Arouca',2.5,'FC Arouca','match1');"/><br></div></td>
                      
                      
                      
-                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+         
                      
                      
                      
@@ -419,7 +445,7 @@
               
             <center><h2 class="pad_bot1 pad_top1">Matchs of tomorrow</h2></center>
           </div>
-             <table ng-controller="GetAllBetItalia">
+             <table >
                 
                       <tr>
                      
@@ -603,11 +629,16 @@
             <td>   {{nn.homeTeamName}}</td>
                      
                      
-                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.50,'FC Barcelone','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.20,'Draw','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="match1=true;addBetInFiche('FC Barcelone','Real madrid',1.85,'Real madrid','match1');"/><br></div></td>
+                           <td ng-init=" getCote1(nn._links.self.href)" style="padding-left: 100px" ><div ng-repeat="cote in cotes" ng-if="cote.match==nn._links.self.href"> <input style="padding-left: 5px ;" type="button" class="btn btn-success col-md-3 focus " ng-value="cote.equipe1"  ng-click="addBetInFiche('West Ham 	
+','Manchester United	 	
+',9,'West Ham United','match1');" /><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.draw"  ng-click="addBetInFiche('West Ham United FC 	
+','Manchester United FC	 	
+',5,'nul','match1');"/><input style="padding-left: 5px ;margin-left:5px" type="button" class="btn btn-success col-md-3" ng-value="cote.equipe2"  ng-click="addBetInFiche('West Ham United FC 	
+','Manchester United FC	 	
+',1.13,'Manchester United','match1');"/><br></div></td>
                      
                      
-                     
-                     <td ng-show="match1" style="padding-left: 100px" > <b style="float:left;padding-left: 5px ;margin-left:5px">1</b> <b><input style="margin-left:15px" type="button" class="btn btn-primary btn-xs" value="50:09"/></b> <b style="margin-left:15px">2</b><br></td>
+          
                      
                      
                      
@@ -759,6 +790,7 @@
               
            
                  </div>
+</div>
 
 <!---------------- end match of the tommorow--------------------------->
      

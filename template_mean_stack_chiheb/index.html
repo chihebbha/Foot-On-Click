@@ -85,16 +85,18 @@
       </li>
     
         <li ng-if="authentifie==1">
-                <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
+
+            <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i
+     
 
 
-           
-                      
-                 
+                 <img ng-scr = "images/khalil.jpg" class="img-circle" style="width:40px;"/>
                  
             
             <a href="#/account">khalil</a>
-            <a href="#" ng-click="disconnect();">deconnection</a>
+            <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+            <a href="#" ng-click="disconnect();" style="font-size:10px;">deconnection</a>
+            
       </li>
       
         
@@ -144,7 +146,7 @@
             
             
             <li><a href="#/chat">Chat</a></li>
-            <li><a href="#/About">A propos</a></li>
+            <li><a href="#/classement">Classement</a></li>
 
         </ul>
       </nav>
@@ -241,7 +243,7 @@
 
 
                                 <li><a href="#/chat">Chat</a></li>
-                                <li><a href="#/About">About</a></li>
+                                <li><a href="#/classement">Stading</a></li>
                   
 
 
@@ -339,7 +341,7 @@
 
 
                                 <li><a href="#/chat">Charla</a></li>
-                                <li><a href="#/About">Acerca</a></li>
+                                <li><a href="#/classement">clasificación </a></li>
 
 
 
@@ -455,7 +457,7 @@
             
             
             <li><a href="#/chat">Chat</a></li>
-            <li><a href="#/About">A propos</a></li>
+            <li><a href="#/classement">Classement</a></li>
 
         </ul>
       </nav>
@@ -500,9 +502,9 @@
 
              </article>
        <article class="col2" ng-init="coteTotal=1" >
-            <h2> <a href="#/classement"><span  class="label label-danger">Stading</span></a></h2>
+           
       
-          <form id="form_1" action="#" method="post">
+          <div ng-show="fiche.length!=0">
             
               <h3 style="text-align:center">Bet Slip</h3>
                <div style="text-align:center">    
@@ -514,7 +516,7 @@
     <div class="modal-header">
         <div class="well well-sm">
             {{pari.equipe1}}
-            <button style="width:10px;height:20px;text-align:left;margin-bottom: 0px;" type="button" class="btn btn-success"><h6 style="margin-top:-5px">1</h6></button>-<button style="width:10px;height:20px;text-align:center;margin-bottom: 0px;" type="button" class="btn btn-success" ><h6 style="margin-top:-5px">2</h6></button> {{pari.equipe2}}
+            <button style="width:10px;height:20px;text-align:left;margin-bottom: 0px;" type="button" class="btn btn-success"><h6 style="margin-top:-5px">-</h6></button>-<button style="width:10px;height:20px;text-align:center;margin-bottom: 0px;" type="button" class="btn btn-success" ><h6 style="margin-top:-5px">-</h6></button> {{pari.equipe2}}
         </div>
         <div class="panel-body">{{pari.equipeParis}} à
             <input ng-show="false" ng-model="ct1" ng-init="ct1=1.80" /><b>{{pari.cote}}</b></div>
@@ -528,12 +530,17 @@
                  <div class="row_select"  > 
                 value:
                   <div class="col-md-1">
-               <input ng-init="paris=0" ng-model="paris" style="margin-left:100px;margin-right:-90px;width:60px;float:left" type="text" class="form-control " > 
+               <input ng-init="paris=0" ng-model="paris" style="    margin-left: 148px;
+    margin-right: -90px;
+    width: 60px;
+    float: left;
+    color: black;
+    background-color: #999;" type="text" class="form-control " > 
                       </div>
                     
               </div>
                   
-              <div class="row_select" >
+              <div class="row_select" ><br>
                
                    Estimated Returns : {{coteTotal*paris}}
                   
@@ -542,13 +549,13 @@
                   
              
               
-              <button style="width:60px;margin-left:100px" class="btn btn-block btn-success btn-xs" >
+             <a ng-click="fiche=[];" href="#/"> <button  style=" width: 91px;margin-left: 146px;" class="btn btn-block btn-success btn-xs" >
                
                  Validate
-              </button>
+              </button></a>
                   </div>
                           
-                       </form>   
+                       </div>   
                      
                           <br>
                
