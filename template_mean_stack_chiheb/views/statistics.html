@@ -4,14 +4,18 @@
     
     <br>On a pour cette semaine  {{allbuts}} matchs joués
     <br><br><br>
-    
+   
     <table>
         
         
         <tr>
             <td style="color:#eee;font-weight:bold">Allemagne</td>
             <td>
-<img src="images/blue.jpg" ng-style="{'width':deutchMatch*10+'px'}" style="height:15px"/></td>
+ <div class="progress">
+  <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{deutchMatch*2}}%">
+    <span class="sr-only">45% Complete</span>
+  </div>
+</div></td>
             <td style="padding-left:20px">{{deutchMatch}} matchs</td>
    </tr>
         
@@ -21,7 +25,11 @@
         <tr>
             <td style="color:#eee;font-weight:bold">France</td>
             <td>
-    <img src="images/green.gif" ng-style="{'width':frenshMatch*10+'px'}" style="height:15px"/>
+     <div class="progress">
+  <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{frenshMatch*2}}%">
+    <span class="sr-only">45% Complete</span>
+  </div>
+</div>
             </td>
             <td style="padding-left:20px">
                 {{frenshMatch}} matchs</td>
@@ -34,7 +42,11 @@
         <tr>
             <td style="color:#eee;font-weight:bold">Angleterre</td>
             <td>
-    <img src="images/yellow.jpg" ng-style="{'width':englishMatch*10+'px'}" style="height:15px"/>
+       <div class="progress">
+  <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{englishMatch*2}}%">
+    <span class="sr-only">45% Complete</span>
+  </div>
+</div>
             </td>
             <td style="padding-left:20px">{{englishMatch}} matchs</td>
      </tr>
@@ -42,7 +54,11 @@
         <tr>
             <td style="color:#eee;font-weight:bold">Espagne</td>
             <td>
-    <img src="images/red.gif" ng-style="{'width':spanishMatch*10+'px'}" style="height:15px"/>
+       <div class="progress">
+  <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{spanishMatch*2}}%">
+    <span class="sr-only">45% Complete</span>
+  </div>
+</div>
             </td>
             <td style="padding-left:20px">
                 {{spanishMatch}} matchs
@@ -51,21 +67,33 @@
         <tr>
     <td style="color:#eee;font-weight:bold">Italie</td>
             <td>
-    <img src="images/purple.jpg" ng-style="{'width':italianMatch*10+'px'}" style="height:15px"/>
+      <div class="progress">
+  <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{italianMatch*2}}%">
+    <span class="sr-only">45% Complete</span>
+  </div>
+</div>
             </td>
             <td style="padding-left:20px">
                 {{italianMatch}} matchs </td>
     
     </tr>
         
+
         <tr>
     <td style="color:#eee;font-weight:bold">Portugal</td>
             <td>
-    <img src="images/brown.jpg" ng-style="{'width':italianMatch*10+'px'}" style="height:15px"/>
+   
+                 <div class="progress">
+  <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{portugalMatch*2}}%">
+    <span class="sr-only">45% Complete</span>
+  </div>
+</div>
+                --------------------------------------------------
             </td>
             <td style="padding-left:20px">
                 {{portugalMatch}} matchs </td>
     </tr>
+
 </table>
 
     
