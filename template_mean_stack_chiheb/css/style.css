@@ -138,6 +138,20 @@ header {
     margin-left: -160px;
     margin-top: 60px;
 }
+
+#img {
+	display:block;
+	background:url(../images/logo.png) 0 0 no-repeat;
+	width:340px;
+	height:110px;
+	text-indent:-9999px;
+    margin-left: -160px;
+    margin-top: 60px;
+}
+
+
+
+
 #icons {
 	float:right;
 	padding: 127px 0px 0 0;

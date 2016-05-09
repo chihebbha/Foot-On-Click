@@ -72,7 +72,7 @@
              <i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
            
             <a href="#/Newsletter">Newsletter</a></li>
-             <li>
+             <li ng-if="authentifie!=1">
                 <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
 
 
@@ -81,9 +81,25 @@
                  
                  
             
-            <a href="#/account">Compte</a>
+            <a href="#/login">login</a>
       </li>
     
+        <li ng-if="authentifie==1">
+                <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
+
+
+           
+                      
+                 
+                 
+            
+            <a href="#/account">khalil</a>
+            <a href="#" ng-click="disconnect();">deconnection</a>
+      </li>
+      
+        
+      
+      
       <li >
    <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
 

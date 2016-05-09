@@ -1,0 +1,43 @@
+
+
+<link rel="stylesheet" href="css/styleInscri.css">
+
+<div id="Box" ng-controller="BetInFicheParis">
+  <div id="Fond"></div>
+  <div id="Formulaire">
+    <div id="Pre_texte">
+     
+        <h2 class="pad_bot1 pad_top1"  > <img src="./images/logo.png" style ="width: 66px;margin-left: -115px;
+    margin-right: 35px;
+    margin-top: -26px " /> Inscription </h2>
+        
+        
+        
+    </div>
+    <form>
+      <div id="PositionNom">
+      <div class='icon' style="position:absolute;margin">
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png'>
+      </div>
+        <input type="text" name="Nom" placeholder="Nom" />
+      </div>
+      <div id="PositionPass">
+        <div class='icon' style="position:absolute">
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png'>
+      </div>
+        <input type="password" name="Pass" placeholder="Mot de passe" />
+      </div>
+      <div id="PositionVerifPass">
+        <div class='icon' style="position:absolute">
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png'>
+      </div>
+        <input type="password" name="VerifPass" placeholder="Vérification" />
+      </div>
+      <div id="PositionEmail">
+        <input type="email" name="Email" placeholder="Email">
+      </div>
+      <div id="PositionSubmit">
+          <a ng-click="inscrire(); " href="#/"> <input style="margin-left:100px" type="submit" name="Inscription"  value='Inscription' ></a></div>
+    </form>
+    </div>
+  </div>

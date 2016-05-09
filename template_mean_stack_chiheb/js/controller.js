@@ -32,7 +32,16 @@
     }  
      
         
-        
+   $scope.inscrire=function(){
+    $scope.authentifie=1;
+    
+     } 
+    
+   $scope.disconnect=function(){
+    $scope.authentifie=0;
+       $window.location.reload();
+    
+     } 
         
 var datetawa=new Date();
          $scope.date0=new Date();
